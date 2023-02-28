@@ -9,11 +9,11 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import random
 
-TRAIN_CLEAN_CSV = '/data/hdd0/zhongshu.hou/Torch_Convtasnet/dns_train_clean_data.csv'
-TRAIN_NOISE_CSV = '/data/hdd0/zhongshu.hou/Torch_Convtasnet/dns_train_noise_data.csv'
-VALID_CLEAN_CSV = '/data/hdd0/zhongshu.hou/Torch_Convtasnet/dns_valid_clean_data.csv'
-VALID_NOISE_CSV = '/data/hdd0/zhongshu.hou/Torch_Convtasnet/dns_valid_noise_data.csv'
-RIR_DIR = '/data/ssd0/zhongshu.hou/dns4_data/rir'
+TRAIN_CLEAN_CSV = './train_clean_data.csv'
+TRAIN_NOISE_CSV = './train_noise_data.csv'
+VALID_CLEAN_CSV = './valid_clean_data.csv'
+VALID_NOISE_CSV = './valid_noise_data.csv'
+RIR_DIR = 'direction to RIR .wav audios'
 
 
 T = int(500 * 48000 / 1000) 
@@ -156,99 +156,3 @@ def collate_fn(batch):
     clean = np.asarray(clean)
     return noisy, clean 
 
-if __name__=='__main__':
-    dataset = Dataset(length_in_seconds=5, random_start_point=True, train=True)
-    train_loader = torch.utils.data.DataLoader(dataset, batch_size=20, shuffle=True, num_workers=0)
-#     # dataset.train = False
-#     # dataset.random_start_point = False
-#     # valid_loader = torch.utils.data.DataLoader(dataset, batch_size=8, shuffle=False, num_workers=0)
-
-# # train_dataset = Dataset(fs = 16000, length_in_seconds = 5)
-# # train_loader = torch.utils.data.DataLoader(train_dataset, 3, shuffle=True, num_workers=0, collate_fn=collate_fn)
-
-#     ''' 鏃跺煙鍥句互鍙婅璋卞浘'''
-#     for i, (noisy,clean) in enumerate(train_loader):
-#         plt.figure(0)
-#         plt.plot(range(noisy.shape[1]),noisy[0,:],range(noisy.shape[1]),clean[0,:])
-#         plt.figure(1)
-#         spectrum,freqs,ts,fig = plt.specgram(noisy[0,:],NFFT = 1200,Fs =48000,window=np.hanning(M = 1200),noverlap=600,mode='default',scale_by_freq=True,sides='default',scale='dB',xextent=None)#缁樺埗棰戣氨鍥?#         plt.figure(2)
-#         spectrum,freqs,ts,fig = plt.specgram(clean[0,:],NFFT = 1200,Fs =48000,window=np.hanning(M = 1200),noverlap=600,mode='default',scale_by_freq=True,sides='default',scale='dB',xextent=None)#缁樺埗棰戣氨鍥?#         plt.show()
-#         break
-    
-
-#     '''瀹岀編閲嶆瀯
-#     noisy_stft = torch.stft(torch.from_numpy(noisy),400,200,win_length=400,window=torch.sqrt(torch.hamming_window(400)),center=True)
-#     noisy_re = torch.istft(noisy_stft,400,200,400,window=torch.sqrt(torch.hamming_window(400)),center=True,onesided=True)
-#     '''
-#     import soundfile as sf
-#     import librosa
-#     import numpy as np
-#     import matplotlib.pyplot as plt
-
-#     '''
-#     add reverb
-#     '''
-#     clean_d = '/data/hdd1/Speech_database/daps/daps_clean/'
-#     rir_d = '/data/hdd1/Speech_database/DNS3_48k/rir/'
-#     clean_data = librosa.util.find_files(clean_d,ext='wav')
-#     rir_data = librosa.util.find_files(rir_d,ext='wav')
-#     np.random.shuffle(clean_data)
-#     np.random.shuffle(rir_data)
-#     clean_s,fs = sf.read(clean_data[0])
-#     rir_s,fr = sf.read(rir_data[0])
-#     rir_s = rir_s[np.argmax(np.abs(rir_s)):]
-
-#     mag = abs(librosa.stft(clean_s,1200,600,center = False))
-
-#     reverb_s = np.convolve(clean_s,rir_s)[:len(clean_s)]
-#     mag_reverb = abs(librosa.stft(reverb_s,1200,600,center = False))
-#     plt.figure()
-#     plt.plot(clean_s)
-
-#     plt.figure()
-#     plt.imshow(np.log(mag),cmap = 'jet',origin = 'lower')
-
-#     plt.figure()
-#     plt.plot(rir_s)
-
-#     plt.figure()
-#     plt.plot(reverb_s)
-
-#     plt.figure()
-#     plt.imshow(np.log(mag_reverb),cmap = 'jet',origin = 'lower')
-
-#     T = int(500 * 48000 / 1000)
-#     t = np.arange(48000)
-#     h = np.exp(-6 * np.log(10) * t / T)
-#     rir_s_c = rir_s[:min(len(h),len(rir_s))] * h[:min(len(h),len(rir_s))]
-
-#     plt.figure()
-#     plt.plot(rir_s_c)
-
-#     reverb_s_c = np.convolve(clean_s,rir_s_c)[:len(clean_s)]
-#     mag_reverb_c = abs(librosa.stft(reverb_s_c,1200,600,center = False))
-#     plt.figure()
-#     plt.imshow(np.log(mag_reverb_c),cmap = 'jet',origin = 'lower')
-
-#     sf.write('/data/hdd0/zhongshu.hou/Torch_DPCRN/clean.wav',clean_s,fs)
-#     sf.write('/data/hdd0/zhongshu.hou/Torch_DPCRN/reverb.wav',reverb_s,fs)
-#     sf.write('/data/hdd0/zhongshu.hou/Torch_DPCRN/reverb_c.wav',reverb_s_c,fs)
-
-#     '''
-#     clip
-#     '''
-#     clean_d = '/data/hdd1/Speech_database/DNS3_48k/dev_testset/'
-#     rir_d = '/data/hdd1/Speech_database/DNS3_48k/rir/'
-#     clean_data = librosa.util.find_files(clean_d,ext='wav')
-#     rir_data = librosa.util.find_files(rir_d,ext='wav')
-#     np.random.shuffle(clean_data)
-#     np.random.shuffle(rir_data)
-#     clean_s,fs = sf.read(clean_data[0])
-#     plt.figure()
-#     plt.plot(clean_s)
-#     clean_s = clean_s /np.max(np.abs(clean_s))
-#     clean_s = clean_s * np.random.randint(2,5) 
-#     clean_s[clean_s > 1] = 1.0
-#     plt.figure()
-#     plt.plot(clean_s)
-#     plt.ylim([-1,1])
