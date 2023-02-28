@@ -325,8 +325,6 @@ class MTFAA_Net(nn.Module):
         self.asa1 = ASA(192)
         self.tf_conv2 = TFCM(B=6, in_channels=192)
         self.asa2 = ASA(192)
-        # self.dprnn1 = DPRNN(192,4,192)
-        # self.dprnn2 = DPRNN(192,4,192)
         self.futa1 = FUTA(in_channels=192, out_channels=96, B=6)
         self.futa2 = FUTA(in_channels=96, out_channels=48, B=6)
         self.futa3 = FUTA(in_channels=48, out_channels=6, B=6)
@@ -341,7 +339,6 @@ class MTFAA_Net(nn.Module):
         [y,fd_out2] = self.fdta2(y)
         [y,fd_out3] = self.fdta3(y)
         y = self.asa2(self.tf_conv2(self.asa1(self.tf_conv1(y))))
-        # y = self.dprnn2(self.dprnn1(y.permute(0,2,3,1)).permute(0,2,3,1))
         y = self.futa1(y,fd_out3)[:,:,:,:-3]     
         y = self.futa2(y,fd_out2)[:,:,:,:-3]  
         y = self.futa3(y,fd_out1)[:,:,:,:-3]
