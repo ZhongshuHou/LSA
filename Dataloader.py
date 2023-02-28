@@ -93,9 +93,7 @@ class Dataset(torch.utils.data.Dataset):
             clean_list = self.valid_clean_list
             noise_list = self.valid_noise_list 
             snr_list = self.valid_snr_list           
-        # reverb_rate = 0 #np.random.rand()
-        # clip_rate = 1.0 #np.random.rand()
-        # clean_idx = np.random.randint(0,len(clean_list))
+
         reverb_rate = np.random.rand()
         lowpass_rate = np.random.rand()
         clip_rate = np.random.rand()
@@ -110,7 +108,7 @@ class Dataset(torch.utils.data.Dataset):
             noise, sr_n = sf.read(noise_list[idx], dtype='float32',start= 0,stop = self.L)
 
             
-        if reverb_rate < 0.1: # 模拟混响信号
+        if reverb_rate < 0.1: 
             rir_idx = np.random.randint(0,len(self.rir_list) - 1)
             rir_f = self.rir_list[rir_idx]
             rir_s = sf.read(rir_f,dtype = 'float32')[0]
@@ -133,8 +131,7 @@ class Dataset(torch.utils.data.Dataset):
         reverb_s,noisy_s = mk_mixture(reverb,noise,snr_list[idx],eps = 1e-8)
 
         if clip_rate < 0.05:
-            # clip_mag = 0.5 + 0.5 * np.random.rand() #[0.5, 1]
-            # mag = np.random.rand()
+
             noisy_s = noisy_s /np.max(np.abs(noisy_s) + 1e-12)
             noisy_s = noisy_s * np.random.uniform(1.2,2)
             noisy_s[noisy_s > 1.0] = 1.0
