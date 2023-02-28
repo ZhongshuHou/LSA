@@ -100,8 +100,9 @@ class Dataset(torch.utils.data.Dataset):
 
         if self.train:
             Begin_S = int(np.random.uniform(0,10 - self.length_in_seconds)) * self.fs
+            Begin_N = int(np.random.uniform(0,10 - self.length_in_seconds)) * self.fs
             clean, sr_s = sf.read(clean_list[idx], dtype='float32',start= Begin_S,stop = Begin_S + self.L)
-            noise, sr_n = sf.read(noise_list[idx], dtype='float32',start= Begin_S,stop = Begin_S + self.L)
+            noise, sr_n = sf.read(noise_list[idx], dtype='float32',start= Begin_N,stop = Begin_N + self.L)
 
         else:
             clean, sr_s = sf.read(clean_list[idx], dtype='float32',start= 0,stop = self.L) 
