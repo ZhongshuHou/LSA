@@ -24,10 +24,8 @@ from typing_extensions import Final
 
 
 
-# scm = np.load('/data/hdd/zhongshu.hou/MTFAA_Net/scm_for_mtfaa.npy').astype(np.float32)
-# inv_Sc = np.load('/data/hdd0/zhongshu.hou/Torch_Convtasnet/inv_SpecCompress.npy').astype(np.float32)
-ERB_fb = np.load('/data/hdd0/zhongshu.hou/g9_copy/MTFAA_full/erb.npy').astype(np.float32)
-# inv_ERB_fb = np.load('/data/hdd0/zhongshu.hou/Torch_Convtasnet/inv_erb.npy').astype(np.float32)
+
+ERB_fb = np.load('./erb.npy').astype(np.float32)
 
 class DPRNN(nn.Module):
     def __init__(self, numUnits, width, channel, **kwargs):
