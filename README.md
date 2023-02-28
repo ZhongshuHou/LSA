@@ -18,5 +18,5 @@ tqdm:      4.62.3
 
 ## 3. Network training
 ### 3.1. Data preparation
-Split your speech and noise audios into 10 seconds segments and generate the .csv files to manage your data. Edit the .csv path in <Dataloader.py>
+Split your speech and noise audios into 10 seconds segments and generate the .csv files to manage your data. Edit the .csv path in [Dataloader.py](https://github.com/ZhongshuHou/LSA/blob/main/Dataloader.py)
 
