@@ -22,16 +22,11 @@ from torch.nn.parameter import Parameter
 from typing_extensions import Final
 from scipy.linalg import toeplitz
 
+ERB_fb = np.load('./erb.npy').astype(np.float32)
 
-
-# scm = np.load('/data/hdd/zhongshu.hou/MTFAA_Net/scm_for_mtfaa.npy').astype(np.float32)
-# inv_Sc = np.load('/data/hdd0/zhongshu.hou/Torch_Convtasnet/inv_SpecCompress.npy').astype(np.float32)
-ERB_fb = np.load('/data/hdd0/zhongshu.hou/g9_copy/MTFAA_full/erb.npy').astype(np.float32)
-# inv_ERB_fb = np.load('/data/hdd0/zhongshu.hou/Torch_Convtasnet/inv_erb.npy').astype(np.float32)
-
-class ALiBi(nn.Module):
+class ASqBi(nn.Module):
     def __init__(self, heads=6, factor = 4, **kwargs):
-        super(ALiBi, self).__init__(**kwargs)
+        super(ASqBi, self).__init__(**kwargs)
         self.heads = heads
         self.factor = factor
 
@@ -234,14 +229,14 @@ class ASA(nn.Module):
         self.pointwise_3 = nn.Conv2d(in_channels//4, in_channels, 1,1,0,1,1, bias=False)
         self.bn_3 = nn.BatchNorm2d(in_channels)
         self.act_3 = nn.PReLU()
-        self.alibi = ALiBi(heads=6, factor=3)
+        self.asqbi = ASqBi(heads=6, factor=3)
     def forward(self,x):
         #x.shape = (Bs, Ci, T, F), dtype=real
         C = x.shape[1]
         F = x.shape[3]
         T = x.shape[2]
         x1 = self.act_1(self.bn_1(self.pointwise_1(x)))
-        mmf = self.alibi(x1)
+        mmf = self.asqbi(x1)
         # qf = x1.permute(0,2,3,1)
         # v = x1.permute(0,2,3,1)
         # kf = x1.permute(0,2,1,3)
