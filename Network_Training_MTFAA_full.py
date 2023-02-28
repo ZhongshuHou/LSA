@@ -8,12 +8,13 @@ from torch.optim.lr_scheduler import StepLR
 from tqdm import tqdm
 import soundfile as sf
 from Dataloader import Dataset, collate_fn
-from MTFAA_Net_full import MTFAA_Net
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+from MTFAA_Net_full import MTFAA_Net as MTFAA
+from MTFAA_Net_full_F_ASqbi import MTFAA_Net as MTFAA_ASqBi
+from MTFAA_Net_full_local_atten import MTFAA_Net as MTFAA_LSA
 torch.set_default_tensor_type(torch.FloatTensor)
 from signal_processing import iSTFT_module_1_8
 WINDOW = torch.sqrt(torch.hann_window(1536,device=device) + 1e-8)
-
+import argparse
 import librosa
 import pesq
 from collections import OrderedDict
@@ -47,9 +48,8 @@ class NoamOpt:
             (self.model_size ** (-0.5) *
             min(step ** (-0.5), step * self.warmup ** (-1.5)))
 
-def train(end_epoch = 100):
-
-
+def main(args):
+    
     def Loss(y_pred, y_true, train = True, idx = -1, epoch = 0):
         snr = torch.div(torch.mean(torch.square(y_pred - y_true), dim=1, keepdim=True),(torch.mean(torch.square(y_true), dim=1, keepdim=True) + 1e-7))
         snr_loss = 10 * torch.log10(snr + 1e-7)
@@ -75,10 +75,15 @@ def train(end_epoch = 100):
         #         np.save('/data/hdd0/zhongshu.hou/Torch_DPCRN/mag_checkpoint/epoch_' + str(epoch) + '_step_' + str(idx) + '.npy', s)
 
         return 0.3*(real_loss + imag_loss) + 0.7*mag_loss, snr_loss
-
+    
+    device = torch.device(args.device if torch.cuda.is_available() else "cpu")
     '''model'''
-    model = MTFAA_Net() 
-
+    if args.model == 'MTFAA':
+        model = MTFAA()
+    elif args.model == 'MTFAA_ASqBi'
+        model = MTFAA_ASqBi()
+    elif args.model == 'MTFAA_LSA':
+        model = MTFAA_LSA()
     ''' train from checkpoints'''
     # checkpoint = torch.load('./.pth',map_location=device)
     # model.load_state_dict(checkpoint['state_dict'])
@@ -94,7 +99,7 @@ def train(end_epoch = 100):
     data_loader = torch.utils.data.DataLoader(dataset, batch_size=3, shuffle=True, drop_last=True, num_workers=2)
 
     '''start train'''
-    for epoch in range(end_epoch):
+    for epoch in range(args.epochs):
         train_loss = []
         asnr_loss = []
         model.train()
@@ -154,8 +159,19 @@ def train(end_epoch = 100):
             {'epoch': epoch,
                 'state_dict': model.state_dict(),
                 'optimizer': optimizer.optimizer.state_dict()},
-            './model_epoch_%s_trainloss_%s_validloss_%s.pth' %(str(epoch), str(train_loss), str(valid_loss)))
+            args.chkpt_path + '/Epoch_%s_trainloss_%s_validloss_%s.pth' %(str(epoch), str(train_loss), str(valid_loss)))
 
 
 if __name__ == '__main__':
-    train(end_epoch=300)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-m', "--model", default='MTFAA', 
+                        help='Choose the model you wanna train: MTFAA, MTFAA_LSA or MTFAA_ASqBi')
+    parser.add_argument('-c', "--chkpt_path", default=None, help='Dir to save the checkpoint files')
+    parser.add_argument('-e', "--epochs", default='300', 
+                        help='Epochs for training')
+    parser.add_argument('-d', "--device", default='cuda:0', 
+                        help='Device used for training')
+    
+    args = parser.parse_args()
+
+    main(args)
