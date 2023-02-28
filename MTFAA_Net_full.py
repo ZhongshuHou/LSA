@@ -22,59 +22,8 @@ from torch.nn.parameter import Parameter
 from typing_extensions import Final
 
 
-
-
-
 ERB_fb = np.load('./erb.npy').astype(np.float32)
 
-class DPRNN(nn.Module):
-    def __init__(self, numUnits, width, channel, **kwargs):
-        super(DPRNN, self).__init__(**kwargs)
-        self.numUnits = numUnits
-        
-        self.intra_rnn = nn.GRU(input_size = self.numUnits, hidden_size = self.numUnits//2, batch_first = True, bidirectional = True)
-    
-        self.intra_fc = nn.Linear(self.numUnits, self.numUnits)
-
-        self.intra_ln = nn.InstanceNorm2d(width,eps=1e-8)
-
-        self.inter_rnn = nn.GRU(input_size = self.numUnits, hidden_size = self.numUnits, batch_first = True, bidirectional = False)
-        
-        self.inter_fc = nn.Linear(self.numUnits, self.numUnits)
-        
-        self.inter_ln = nn.InstanceNorm2d(channel, eps=1e-8)
-
-        self.width = width
-        self.channel = channel
-    
-    def forward(self,x):
-
-        if not x.is_contiguous():
-            x = x.contiguous()   
-        ## Intra RNN    
-        intra_LSTM_input = x.view(x.shape[0] * x.shape[1], x.shape[2], x.shape[3]) #(Bs*T, F, C)
-        intra_LSTM_out = self.intra_rnn(intra_LSTM_input)[0] #(Bs*T, F, C)
-        intra_dense_out = self.intra_fc(intra_LSTM_out)
-        intra_ln_input = intra_dense_out.view(x.shape[0], -1, self.width, self.channel) #(Bs, T, F, C)
-        intra_ln_input = intra_ln_input.permute(0,2,1,3) #(Bs, F, T, C)
-        intra_out = self.intra_ln(intra_ln_input)
-        intra_out = intra_out.permute(0,2,1,3) #(Bs, T, F, C)
-        intra_out = torch.add(x, intra_out)      
-        ## Inter RNN
-        inter_LSTM_input = intra_out.permute(0,2,1,3) #(Bs, F, T, C)
-        inter_LSTM_input = inter_LSTM_input.contiguous()
-        inter_LSTM_input = inter_LSTM_input.view(inter_LSTM_input.shape[0] * inter_LSTM_input.shape[1], inter_LSTM_input.shape[2], inter_LSTM_input.shape[3]) #(Bs * F, T, C)
-        inter_LSTM_out = self.inter_rnn(inter_LSTM_input)[0]
-        inter_dense_out = self.inter_fc(inter_LSTM_out)
-        inter_dense_out = inter_dense_out.view(x.shape[0], self.width, -1, self.channel) #(Bs, F, T, C)
-        inter_ln_input = inter_dense_out.permute(0,3,2,1) #(Bs, C, T, F)
-        inter_out = self.inter_ln(inter_ln_input)
-        inter_out = inter_out.permute(0,2,3,1) #(Bs, T, F, C)
-        inter_out = torch.add(intra_out, inter_out)
-        inter_out = inter_out.permute(0,3,1,2)
-        inter_out = inter_out.contiguous()
-        
-        return inter_out
 
 class AttentionMask(nn.Module):
     
@@ -337,8 +286,6 @@ class MTFAA_Net(nn.Module):
         self.asa1 = ASA(192)
         self.tf_conv2 = TFCM(B=6, in_channels=192)
         self.asa2 = ASA(192)
-        # self.dprnn1 = DPRNN(192,4,192)
-        # self.dprnn2 = DPRNN(192,4,192)
         self.futa1 = FUTA(in_channels=192, out_channels=96, B=6)
         self.futa2 = FUTA(in_channels=96, out_channels=48, B=6)
         self.futa3 = FUTA(in_channels=48, out_channels=6, B=6)
@@ -353,7 +300,6 @@ class MTFAA_Net(nn.Module):
         [y,fd_out2] = self.fdta2(y)
         [y,fd_out3] = self.fdta3(y)
         y = self.asa2(self.tf_conv2(self.asa1(self.tf_conv1(y))))
-        # y = self.dprnn2(self.dprnn1(y.permute(0,2,3,1)).permute(0,2,3,1))
         y = self.futa1(y,fd_out3)[:,:,:,:-3]     
         y = self.futa2(y,fd_out2)[:,:,:,:-3]  
         y = self.futa3(y,fd_out1)[:,:,:,:-3]
