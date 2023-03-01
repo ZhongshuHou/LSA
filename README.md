@@ -1,4 +1,5 @@
 # Local Spectral Attention for Full-band Speech Enhancement  
+![Figure](https://user-images.githubusercontent.com/103247057/222057044-e8cdc198-23c2-4fc7-b548-0ec98da8377d.png)
 
 # Contents
 - [Repository description](#repository-description)
