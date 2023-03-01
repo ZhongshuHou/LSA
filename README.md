@@ -71,5 +71,5 @@ The visualization of LSA mechanism can be seen in the figure below:
 <!-- ![LSA](https://user-images.githubusercontent.com/103247057/222067488-191bf69f-238a-4616-96dd-582946f6473c.png) -->
 <!-- <img src="https://user-images.githubusercontent.com/103247057/222067488-191bf69f-238a-4616-96dd-582946f6473c.png" width="600" height="300" /> -->
 <div align=center><img src="https://user-images.githubusercontent.com/103247057/222067488-191bf69f-238a-4616-96dd-582946f6473c.png" width="600" height="300" /></div>  
-The unofficial Pytorch implementation of MTFAA and its LSA-based model can be seen in https://github.com/ZhongshuHou/LSA/blob/main/MTFAA_Net_full.py and 
-https://github.com/ZhongshuHou/LSA/blob/main/MTFAA_Net_full_local_atten.py respectively
+The unofficial Pytorch implementation of MTFAA and its LSA-based model can be seen in [Original MTFAA](https://github.com/ZhongshuHou/LSA/blob/main/MTFAA_Net_full.py) and 
+[LSA-based MTFAA](https://github.com/ZhongshuHou/LSA/blob/main/MTFAA_Net_full_local_atten.py) respectively
