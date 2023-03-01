@@ -1,7 +1,7 @@
 # Local Spectral Attention for Full-band Speech Enhancement  
 
 # Contents
-- [Repository description](#repository-description)
+- [Repository description](#1.-repository-description)
 - [Rquirements](#rquirements)
 - [Network training](#network-training)
 	- [Data preparation](#data-preparation)
