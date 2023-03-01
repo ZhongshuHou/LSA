@@ -3044,3 +3044,849 @@ The proposed method also reduces computational complexity in spectral attention 
 </div>
 
 </body>
+
+We compare the modified MTFAA model with previous full-band SOTA methods on VCTK-DEMAND dataset and the results are listed in table below
+
+
+<body lang=ZH-CN style='tab-interval:21.0pt;text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<div align=center>
+
+<table class=1 border=1 cellspacing=0 cellpadding=0 width=447 style='border-collapse:
+ collapse;mso-table-layout-alt:fixed;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0cm 2.85pt 0cm 2.85pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:12.75pt'>
+  <td width=104 nowrap valign=top style='width:78.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>Models<o:p></o:p></span></p>
+  </td>
+  <td width=38 valign=top style='width:1.0cm;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>Year<o:p></o:p></span></p>
+  </td>
+  <td width=60 valign=top style='width:45.1pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span class=GramE><span
+  lang=EN-US style='font-size:8.0pt;font-family:"Times New Roman",serif'>Param.(</span></span><span
+  lang=EN-US style='font-size:8.0pt;font-family:"Times New Roman",serif'>M)<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>PESQ<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span class=GramE><span
+  lang=EN-US style='font-size:8.0pt;font-family:"Times New Roman",serif'>STOI(</span></span><span
+  lang=EN-US style='font-size:8.0pt;font-family:"Times New Roman",serif'>%)<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>CSIG<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>CBAK<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>COVL<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:12.75pt'>
+  <td width=104 nowrap valign=top style='width:78.0pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>Noisy<o:p></o:p></span></p>
+  </td>
+  <td width=38 valign=top style='width:1.0cm;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>-<o:p></o:p></span></p>
+  </td>
+  <td width=60 valign=top style='width:45.1pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>-<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>1.97<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>92.1<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.34<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>2.44<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;mso-border-top-alt:
+  solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>2.63<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:12.75pt'>
+  <td width=104 nowrap valign=top style='width:78.0pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  lang=EN-US style='font-size:8.0pt;font-family:"Times New Roman",serif'>RNNoise</span></span><span
+  lang=EN-US style='font-size:8.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=38 valign=top style='width:1.0cm;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>2020<o:p></o:p></span></p>
+  </td>
+  <td width=60 valign=top style='width:45.1pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>0.06<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>2.33<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>92.2<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>3.40<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2.51<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>2.84<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:12.75pt'>
+  <td width=104 nowrap valign=top style='width:78.0pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>PercepNet</span><span lang=EN-US style='font-size:8.0pt;font-family:
+  "Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=38 valign=top style='width:1.0cm;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>2020<o:p></o:p></span></p>
+  </td>
+  <td width=60 valign=top style='width:45.1pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>8.00<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>2.73<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>-<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>-<span
+  style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>-<span
+  style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>-<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:12.75pt'>
+  <td width=104 nowrap valign=top style='width:78.0pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>CTS-Net(full) <o:p></o:p></span></p>
+  </td>
+  <td width=38 valign=top style='width:1.0cm;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2020<o:p></o:p></span></p>
+  </td>
+  <td width=60 valign=top style='width:45.1pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>7.09<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2.92<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>94.3<span
+  style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>4.22<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.43<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.62<span
+  style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:12.75pt'>
+  <td width=104 nowrap valign=top style='width:78.0pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>DCCRN<span
+  style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></p>
+  </td>
+  <td width=38 valign=top style='width:1.0cm;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>2020<o:p></o:p></span></p>
+  </td>
+  <td width=60 valign=top style='width:45.1pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.70<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>2.54<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>93.8</span><span lang=EN-US style='font-size:8.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>3.74</span><span lang=EN-US style='font-size:8.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>3.13</span><span lang=EN-US style='font-size:8.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2.75</span><span lang=EN-US style='font-size:8.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;height:12.75pt'>
+  <td width=104 nowrap valign=top style='width:78.0pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>NSNet2</span><span lang=EN-US style='font-size:8.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=38 valign=top style='width:1.0cm;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>2021<o:p></o:p></span></p>
+  </td>
+  <td width=60 valign=top style='width:45.1pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>6.17</span><span lang=EN-US style='font-size:8.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2.47</span><span lang=EN-US style='font-size:8.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>90.3<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.23<span
+  style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>2.99<span
+  style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2.90<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;height:12.75pt'>
+  <td width=104 nowrap valign=top style='width:78.0pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>S-DCCRN<o:p></o:p></span></p>
+  </td>
+  <td width=38 valign=top style='width:1.0cm;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2022<o:p></o:p></span></p>
+  </td>
+  <td width=60 valign=top style='width:45.1pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2.34<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2.84<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>94.0<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>4.03<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.43<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>2.97<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;height:12.75pt'>
+  <td width=104 nowrap valign=top style='width:78.0pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  lang=EN-US style='font-size:8.0pt;font-family:"Times New Roman",serif;
+  mso-bidi-font-weight:bold'>FullSubNet</span></span><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>+<o:p></o:p></span></p>
+  </td>
+  <td width=38 valign=top style='width:1.0cm;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2022<o:p></o:p></span></p>
+  </td>
+  <td width=60 valign=top style='width:45.1pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>8.67<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2.88<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>94.0<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.86<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.42<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.57<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;height:12.75pt'>
+  <td width=104 nowrap valign=top style='width:78.0pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span class=SpellE><span
+  lang=EN-US style='font-size:8.0pt;font-family:"Times New Roman",serif;
+  mso-bidi-font-weight:bold'>GaGNet</span></span><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'><o:p></o:p></span></p>
+  </td>
+  <td width=38 valign=top style='width:1.0cm;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2022<o:p></o:p></span></p>
+  </td>
+  <td width=60 valign=top style='width:45.1pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>5.95<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2.94<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>-<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>4.26<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.45<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.59<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;height:12.75pt'>
+  <td width=104 nowrap valign=top style='width:78.0pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>DMF-Net<o:p></o:p></span></p>
+  </td>
+  <td width=38 valign=top style='width:1.0cm;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2022<o:p></o:p></span></p>
+  </td>
+  <td width=60 valign=top style='width:45.1pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>7.84<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2.97<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>94.4<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>4.26<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.52<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.62<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;height:12.75pt'>
+  <td width=104 nowrap valign=top style='width:78.0pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>DS-Net<o:p></o:p></span></p>
+  </td>
+  <td width=38 valign=top style='width:1.0cm;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2022<o:p></o:p></span></p>
+  </td>
+  <td width=60 valign=top style='width:45.1pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>3.30<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2.78<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>94.3<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>4.20<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.34<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.48<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;height:12.75pt'>
+  <td width=104 nowrap valign=top style='width:78.0pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>SF-Net<o:p></o:p></span></p>
+  </td>
+  <td width=38 valign=top style='width:1.0cm;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2022<o:p></o:p></span></p>
+  </td>
+  <td width=60 valign=top style='width:45.1pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>6.98<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>3.02<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>94.5<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>4.36<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.54<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.67<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;height:12.75pt'>
+  <td width=104 nowrap valign=top style='width:78.0pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>DeepFilterNet2<o:p></o:p></span></p>
+  </td>
+  <td width=38 valign=top style='width:1.0cm;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2022<o:p></o:p></span></p>
+  </td>
+  <td width=60 valign=top style='width:45.1pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2.31<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>3.08<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>94.3<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.7pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>4.30<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.40<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap valign=top style='width:36.75pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  padding:0cm 2.85pt 0cm 2.85pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'>3.70<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;height:12.75pt'>
+  <td width=104 nowrap style='width:78.0pt;border:none;border-bottom:dashed windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:dashed windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=left style='text-align:left'><b><span lang=EN-US
+  style='font-size:6.5pt;mso-bidi-font-size:7.0pt;font-family:"Times New Roman",serif'>MTFAA
+  (<span class=SpellE>Cau</span>., LSA)<o:p></o:p></span></b></p>
+  </td>
+  <td width=38 style='width:1.0cm;border:none;border-bottom:dashed windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:dashed windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2022<o:p></o:p></span></p>
+  </td>
+  <td width=60 style='width:45.1pt;border:none;border-bottom:dashed windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:dashed windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>1.5<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap style='width:36.7pt;border:none;border-bottom:dashed windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:dashed windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:8.0pt;
+  mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;color:black;mso-font-kerning:0pt'>3.16</span></b><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'><o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap style='width:36.75pt;border:none;border-bottom:dashed windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:dashed windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:8.0pt;
+  mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;color:black;mso-font-kerning:0pt'>94.7</span></b><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap style='width:36.7pt;border:none;border-bottom:dashed windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:dashed windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:8.0pt;
+  mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;color:black;mso-font-kerning:0pt'>4.35</span></b><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap style='width:36.75pt;border:none;border-bottom:dashed windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:dashed windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:8.0pt;
+  mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;color:black;mso-font-kerning:0pt'>3.61</span></b><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap style='width:36.75pt;border:none;border-bottom:dashed windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:dashed windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:8.0pt;
+  mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;color:black;mso-font-kerning:0pt'>3.78</span></b><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;mso-yfti-lastrow:yes;height:12.75pt'>
+  <td width=104 nowrap style='width:78.0pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:dashed windowtext .5pt;mso-border-top-alt:dashed windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=left style='text-align:left'><b><span lang=EN-US
+  style='font-size:6.5pt;mso-bidi-font-size:7.0pt;font-family:"Times New Roman",serif'>MTFAA
+  (Non-<span class=SpellE>cau</span>., LSA)<o:p></o:p></span></b></p>
+  </td>
+  <td width=38 style='width:1.0cm;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:dashed windowtext .5pt;mso-border-top-alt:dashed windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>2022<o:p></o:p></span></p>
+  </td>
+  <td width=60 style='width:45.1pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:dashed windowtext .5pt;mso-border-top-alt:dashed windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
+  bold'>1.5<o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap style='width:36.7pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:dashed windowtext .5pt;mso-border-top-alt:dashed windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:8.0pt;mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;color:black;mso-font-kerning:0pt;mso-fareast-language:
+  EN-US'>3.30</span></b><span lang=EN-US style='font-size:8.0pt;font-family:
+  "Times New Roman",serif;mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap style='width:36.75pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:dashed windowtext .5pt;mso-border-top-alt:dashed windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:8.0pt;mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;color:black;mso-font-kerning:0pt;mso-fareast-language:
+  EN-US'>95.3</span></b><span lang=EN-US style='font-size:8.0pt;font-family:
+  "Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap style='width:36.7pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:dashed windowtext .5pt;mso-border-top-alt:dashed windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:8.0pt;mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;color:black;mso-font-kerning:0pt;mso-fareast-language:
+  EN-US'>4.45</span></b><span lang=EN-US style='font-size:8.0pt;font-family:
+  "Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap style='width:36.75pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:dashed windowtext .5pt;mso-border-top-alt:dashed windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:8.0pt;mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;color:black;mso-font-kerning:0pt;mso-fareast-language:
+  EN-US'>3.73</span></b><span lang=EN-US style='font-size:8.0pt;font-family:
+  "Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=49 nowrap style='width:36.75pt;border:none;border-bottom:solid windowtext 1.0pt;
+  mso-border-top-alt:dashed windowtext .5pt;mso-border-top-alt:dashed windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 2.85pt 0cm 2.85pt;
+  height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:8.0pt;mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;color:black;mso-font-kerning:0pt;mso-fareast-language:
+  EN-US'>3.90</span></b><span lang=EN-US style='font-size:8.0pt;font-family:
+  "Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
