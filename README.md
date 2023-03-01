@@ -8,6 +8,7 @@
 	- [Data preparation](#data-preparation)
 	- [Start training](#start-training)
 	- [Inference](#inference)
+- [Ablation study and experiments results](#ablation-study-and-experiments-results)
 
 ## Repository description
 This repository conduct ablation studies on local attention (a.k.a band attention) applied in full-band spectrum, namely local spectral attention (LSA). Two full-band speech enhancement (SE) models with spectral attention replace the conventional attention (a global manner) with LSA that only looks at adjacent bands at a certain frequency (a local manner). One model is our previous work called DPARN, whose source code can be found in https://github.com/Qinwen-Hu/dparn.   
@@ -61,3 +62,4 @@ Enhance noisy audios by command:
 ```
 python Infer.py -m model_to_train(including MTFAA, MTFAA_LSA or MTFAA_ASqBi) -c path_to_load_the_checkpoint_files -t path_to_folder_containing_noisy_audios -s path_to_folder_saving_the_enhanced_clips -d Device_used_for_training(cuda:0)
 ```
+## Ablation study and experiments results
