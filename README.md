@@ -2942,3 +2942,105 @@ We also conduct subjective listening preference test on MTFAA model to validate 
 </div>
 
 </body>
+
+The proposed method also reduces computational complexity in spectral attention and the statistics are given in Table below
+
+
+<body lang=ZH-CN style='tab-interval:21.0pt;text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<div align=center>
+
+<table class=PlainTable22 border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-top-alt:solid #7F7F7F .5pt;
+ mso-border-top-themecolor:text1;mso-border-top-themetint:128;mso-border-bottom-alt:
+ solid #7F7F7F .5pt;mso-border-bottom-themecolor:text1;mso-border-bottom-themetint:
+ 128;mso-yfti-tbllook:1568;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes;mso-yfti-lastfirstrow:yes;
+  height:10.5pt'>
+  <td style='border-top:solid #7F7F7F 1.0pt;mso-border-top-themecolor:text1;
+  mso-border-top-themetint:128;border-left:none;border-bottom:solid #7F7F7F 1.0pt;
+  mso-border-bottom-themecolor:text1;mso-border-bottom-themetint:128;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid #7F7F7F .5pt;
+  mso-border-top-themecolor:text1;mso-border-top-themetint:128;mso-border-bottom-alt:
+  solid #7F7F7F .5pt;mso-border-bottom-themecolor:text1;mso-border-bottom-themetint:
+  128;mso-border-right-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:10.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  lang=IT style='font-size:8.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:宋体;mso-font-kerning:0pt;mso-ansi-language:IT;
+  mso-fareast-language:IT;mso-bidi-font-weight:bold'>Model<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:solid #7F7F7F 1.0pt;mso-border-top-themecolor:text1;
+  mso-border-top-themetint:128;border-left:none;border-bottom:solid #7F7F7F 1.0pt;
+  mso-border-bottom-themecolor:text1;mso-border-bottom-themetint:128;
+  border-right:none;mso-border-left-alt:solid windowtext .5pt;mso-border-top-alt:
+  solid #7F7F7F .5pt;mso-border-top-themecolor:text1;mso-border-top-themetint:
+  128;mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:solid #7F7F7F .5pt;
+  mso-border-bottom-themecolor:text1;mso-border-bottom-themetint:128;
+  padding:0cm 5.4pt 0cm 5.4pt;height:10.5pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  lang=IT style='font-size:8.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:宋体;mso-font-kerning:0pt;mso-ansi-language:IT;
+  mso-fareast-language:IT;mso-bidi-font-weight:bold'>Percentage of complexity
+  reduction </span><b style='mso-bidi-font-weight:normal'><span lang=IT
+  style='font-size:8.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:宋体;mso-font-kerning:0pt;mso-ansi-language:IT;
+  mso-fareast-language:IT'><o:p></o:p></span></b></p>
+  <p class=MsoNormal align=center style='text-align:center;mso-yfti-cnfc:1'><span
+  lang=IT style='font-size:8.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:宋体;mso-font-kerning:0pt;mso-ansi-language:IT;
+  mso-fareast-language:IT;mso-bidi-font-weight:bold'>in spectral attention (%)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:0;height:10.5pt'>
+  <td style='border:none;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid #7F7F7F .5pt;mso-border-top-themecolor:text1;mso-border-top-themetint:
+  128;mso-border-top-alt:solid #7F7F7F .5pt;mso-border-top-themecolor:text1;
+  mso-border-top-themetint:128;mso-border-right-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:10.5pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=IT
+  style='font-size:8.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt;mso-ansi-language:IT;
+  mso-fareast-language:IT'>MTFAA</span><span lang=IT style='font-size:8.0pt;
+  mso-bidi-font-size:9.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  宋体;mso-font-kerning:0pt;mso-ansi-language:IT;mso-fareast-language:IT'><o:p></o:p></span></p>
+  </td>
+  <td style='border:none;mso-border-left-alt:solid windowtext .5pt;padding:
+  0cm 5.4pt 0cm 5.4pt;height:10.5pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=IT
+  style='font-size:8.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:宋体;mso-font-kerning:0pt;mso-ansi-language:IT;
+  mso-fareast-language:IT'>63.2<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:10.5pt'>
+  <td style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-bottom-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:10.5pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=IT
+  style='font-size:8.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:宋体;mso-font-kerning:0pt;mso-ansi-language:IT'>DPARN<o:p></o:p></span></p>
+  </td>
+  <td style='border:none;border-bottom:solid #7F7F7F 1.0pt;mso-border-bottom-themecolor:
+  text1;mso-border-bottom-themetint:128;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:solid #7F7F7F .5pt;
+  mso-border-bottom-themecolor:text1;mso-border-bottom-themetint:128;
+  padding:0cm 5.4pt 0cm 5.4pt;height:10.5pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=IT
+  style='font-size:8.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:宋体;mso-font-kerning:0pt;mso-ansi-language:IT;
+  mso-fareast-language:IT'>25.4<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
