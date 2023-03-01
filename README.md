@@ -81,12 +81,18 @@ The training process can be seen in figures below, where both LSA-based models a
 ![Validation_mtfaa](https://user-images.githubusercontent.com/103247057/222074828-44bc05e4-c05e-40bc-b4b5-060cdb7030a7.jpeg) -->
 <div align=center><img src="https://user-images.githubusercontent.com/103247057/222074817-58680383-6d61-42c6-9f94-eb4c58ecefab.jpeg" width="320" height="240" /><img src="https://user-images.githubusercontent.com/103247057/222074828-44bc05e4-c05e-40bc-b4b5-060cdb7030a7.jpeg" width="320" height="240" /></div>
 
+<body lang=ZH-CN style='tab-interval:21.0pt;text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<div align=center>
+
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=246
  style='width:184.3pt;border-collapse:collapse;mso-yfti-tbllook:1184;
  mso-padding-alt:0cm 1.4pt 0cm 1.4pt'>
  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:11.35pt;mso-row-margin-right:
   7.1pt'>
-  <td width=57 colspan=2 valign=bottom style='width:42.55pt;border:solid windowtext 1.0pt;
+  <td width=64 colspan=2 valign=bottom style='width:47.95pt;border:solid windowtext 1.0pt;
   border-left:none;mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:
   solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
   0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
@@ -94,9 +100,9 @@ The training process can be seen in figures below, where both LSA-based models a
   lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;
   mso-fareast-font-family:等线;color:black;mso-bidi-font-weight:bold'>Config.<o:p></o:p></span></p>
   </td>
-  <td width=113 nowrap colspan=4 valign=bottom style='width:3.0cm;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
+  <td width=106 nowrap colspan=4 valign=bottom style='width:79.65pt;border:
+  solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
   lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;
   mso-fareast-font-family:等线;color:black'>Wideband Metrics<o:p></o:p></span></p>
@@ -114,7 +120,7 @@ The training process can be seen in figures below, where both LSA-based models a
   width=9><p class='MsoNormal'>&nbsp;</td>
  </tr>
  <tr style='mso-yfti-irow:1;height:11.35pt'>
-  <td width=28 valign=bottom style='width:21.3pt;border-top:none;border-left:
+  <td width=28 valign=bottom style='width:21.1pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
@@ -123,43 +129,28 @@ The training process can be seen in figures below, where both LSA-based models a
   lang=EN-US style='font-size:5.5pt;mso-bidi-font-size:6.5pt;font-family:"Times New Roman",serif;
   mso-fareast-font-family:等线;color:black;mso-bidi-font-weight:bold'>Model<o:p></o:p></span></p>
   </td>
-  <td width=28 valign=bottom style='width:21.25pt;border-top:none;border-left:
+  <td width=36 valign=bottom style='width:26.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
-  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><!--[if gte msEquation 12]><m:oMathPara><m:oMath><m:sSub><m:sSubPr><span
-      style='font-size:5.5pt;mso-ansi-font-size:5.5pt;mso-bidi-font-size:6.5pt;
-      font-family:"Cambria Math",serif;mso-ascii-font-family:"Cambria Math";
-      mso-hansi-font-family:"Cambria Math";mso-bidi-font-family:"Times New Roman";
-      font-style:italic;mso-bidi-font-style:normal'><m:ctrlPr></m:ctrlPr></span></m:sSubPr><m:e><i
-      style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:
-      5.5pt;mso-bidi-font-size:6.5pt;font-family:"Cambria Math",serif;
-      mso-bidi-font-family:"Times New Roman"'><m:r>N</m:r></span></i></m:e><m:sub><i
-      style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:
-      5.5pt;mso-bidi-font-size:6.5pt;font-family:"Cambria Math",serif;
-      mso-bidi-font-family:"Times New Roman"'><m:r>l</m:r></span></i></m:sub></m:sSub></m:oMath></m:oMathPara><![endif]--><![if !msEquation]><span
-  lang=EN-US style='font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:
-  等线;mso-ascii-theme-font:minor-latin;mso-fareast-theme-font:minor-fareast;
-  mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";
-  mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:
-  ZH-CN;mso-bidi-language:AR-SA'><!--[if gte vml 1]><v:shape id="_x0000_i1025"
-   type="#_x0000_t75" style='width:5.2pt;height:15.55pt'>
-   <v:imagedata src="Table_readme.files/image003.png" o:title="" chromakey="white"/>
-  </v:shape><![endif]--><![if !vml]><img width=7 height=21
-  src="Table_readme.files/image004.png" v:shapes="_x0000_i1025"><![endif]></span><![endif]><span
-  lang=EN-US style='font-size:5.5pt;mso-bidi-font-size:6.5pt;font-family:"Times New Roman",serif;
-  mso-fareast-font-family:等线;color:black;mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  class=SpellE><i style='mso-bidi-font-style:normal'><span lang=EN-US
+  style='font-size:7.5pt;mso-bidi-font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;color:black;mso-bidi-font-weight:bold'>N<sub>l</sub></span></i></span><i
+  style='mso-bidi-font-style:normal'><sub><span lang=EN-US style='font-size:
+  5.5pt;mso-bidi-font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;color:black;mso-bidi-font-weight:bold'><o:p></o:p></span></sub></i></p>
   </td>
-  <td width=28 nowrap valign=bottom style='width:21.25pt;border:none;
-  border-bottom:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
-  mso-border-left-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
-  mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
-  padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
+  <td width=27 nowrap valign=bottom style='width:19.9pt;border:none;border-bottom:
+  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:
+  solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:
+  solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
+  0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
   lang=EN-US style='font-size:5.5pt;mso-bidi-font-size:6.5pt;font-family:"Times New Roman",serif;
   mso-fareast-font-family:等线;color:black'>PESQ<o:p></o:p></span></p>
   </td>
-  <td width=28 valign=bottom style='width:21.25pt;border:none;border-bottom:
+  <td width=27 valign=bottom style='width:19.9pt;border:none;border-bottom:
   solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
   solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
   0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
@@ -167,7 +158,7 @@ The training process can be seen in figures below, where both LSA-based models a
   lang=EN-US style='font-size:5.5pt;mso-bidi-font-size:6.5pt;font-family:"Times New Roman",serif;
   mso-fareast-font-family:等线;color:black'>CSIG<o:p></o:p></span></p>
   </td>
-  <td width=28 valign=bottom style='width:21.25pt;border:none;border-bottom:
+  <td width=27 valign=bottom style='width:19.9pt;border:none;border-bottom:
   solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
   solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;padding:
   0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
@@ -175,7 +166,7 @@ The training process can be seen in figures below, where both LSA-based models a
   lang=EN-US style='font-size:5.5pt;mso-bidi-font-size:6.5pt;font-family:"Times New Roman",serif;
   mso-fareast-font-family:等线;color:black'>CBAK<o:p></o:p></span></p>
   </td>
-  <td width=28 valign=bottom style='width:21.3pt;border-top:none;border-left:
+  <td width=27 valign=bottom style='width:19.95pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
@@ -205,64 +196,45 @@ The training process can be seen in figures below, where both LSA-based models a
   </td>
  </tr>
  <tr style='mso-yfti-irow:2;height:11.35pt'>
-  <td width=28 rowspan=3 style='width:21.3pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  <td width=28 rowspan=3 style='width:21.1pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
   padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
   lang=EN-US style='font-size:5.0pt;mso-bidi-font-size:5.5pt;font-family:"Times New Roman",serif;
   mso-fareast-font-family:等线;color:black'>MTFAA<o:p></o:p></span></p>
   </td>
-  <td width=28 style='width:21.25pt;border:none;border-right:solid windowtext 1.0pt;
+  <td width=36 style='width:26.85pt;border:none;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-right-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
   height:11.35pt'>
-  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><!--[if gte msEquation 12]><m:oMathPara><m:oMath><m:sSup><m:sSupPr><span
-      style='font-size:6.5pt;mso-ansi-font-size:6.5pt;mso-bidi-font-size:7.5pt;
-      font-family:"Cambria Math",serif;mso-ascii-font-family:"Cambria Math";
-      mso-hansi-font-family:"Cambria Math";mso-bidi-font-family:"Times New Roman";
-      font-style:italic;mso-bidi-font-style:normal'><m:ctrlPr></m:ctrlPr></span></m:sSupPr><m:e><i
-      style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:
-      6.5pt;mso-bidi-font-size:7.5pt;font-family:"Cambria Math",serif;
-      mso-bidi-font-family:"Times New Roman"'><m:r>F</m:r></span></i></m:e><m:sup><i
-      style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:
-      6.5pt;mso-bidi-font-size:7.5pt;font-family:"Cambria Math",serif;
-      mso-bidi-font-family:"Times New Roman"'><m:r>'</m:r></span></i></m:sup></m:sSup><i
-    style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:6.5pt;
-    mso-bidi-font-size:7.5pt;font-family:"Cambria Math",serif;mso-bidi-font-family:
-    "Times New Roman"'><m:r>/2</m:r></span></i></m:oMath></m:oMathPara><![endif]--><![if !msEquation]><span
-  lang=EN-US style='font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:
-  等线;mso-ascii-theme-font:minor-latin;mso-fareast-theme-font:minor-fareast;
-  mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";
-  mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:
-  ZH-CN;mso-bidi-language:AR-SA'><!--[if gte vml 1]><v:shape id="_x0000_i1025"
-   type="#_x0000_t75" style='width:12.65pt;height:15.55pt'>
-   <v:imagedata src="Table_readme.files/image005.png" o:title="" chromakey="white"/>
-  </v:shape><![endif]--><![if !vml]><img width=17 height=21
-  src="Table_readme.files/image006.png" v:shapes="_x0000_i1025"><![endif]></span><![endif]><span
-  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;
-  mso-fareast-font-family:等线;color:black'><o:p></o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><i
+  style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;color:black'>F’/2<o:p></o:p></span></i></p>
   </td>
-  <td width=28 nowrap style='width:21.25pt;border:none;mso-border-top-alt:solid windowtext .5pt;
+  <td width=27 nowrap style='width:19.9pt;border:none;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
   height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
   lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;
   mso-fareast-font-family:等线;color:black'>3.16<o:p></o:p></span></p>
   </td>
-  <td width=28 style='width:21.25pt;border:none;mso-border-top-alt:solid windowtext .5pt;
+  <td width=27 style='width:19.9pt;border:none;mso-border-top-alt:solid windowtext .5pt;
   padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
   lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;
   mso-fareast-font-family:等线;color:black'>4.34<o:p></o:p></span></p>
   </td>
-  <td width=28 style='width:21.25pt;border:none;mso-border-top-alt:solid windowtext .5pt;
+  <td width=27 style='width:19.9pt;border:none;mso-border-top-alt:solid windowtext .5pt;
   padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
   lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;
   mso-fareast-font-family:等线;color:black'>3.63<o:p></o:p></span></b></p>
   </td>
-  <td width=28 style='width:21.3pt;border:none;border-right:solid windowtext 1.0pt;
+  <td width=27 style='width:19.95pt;border:none;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-right-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
   height:11.35pt'>
@@ -285,53 +257,34 @@ The training process can be seen in figures below, where both LSA-based models a
   </td>
  </tr>
  <tr style='mso-yfti-irow:3;height:11.35pt'>
-  <td width=28 style='width:21.25pt;border:none;border-right:solid windowtext 1.0pt;
+  <td width=36 style='width:26.85pt;border:none;border-right:solid windowtext 1.0pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-right-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
   height:11.35pt'>
-  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><!--[if gte msEquation 12]><m:oMathPara><m:oMath><m:sSup><m:sSupPr><span
-      style='font-size:6.5pt;mso-ansi-font-size:6.5pt;mso-bidi-font-size:7.5pt;
-      font-family:"Cambria Math",serif;mso-ascii-font-family:"Cambria Math";
-      mso-hansi-font-family:"Cambria Math";mso-bidi-font-family:"Times New Roman";
-      font-style:italic;mso-bidi-font-style:normal'><m:ctrlPr></m:ctrlPr></span></m:sSupPr><m:e><i
-      style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:
-      6.5pt;mso-bidi-font-size:7.5pt;font-family:"Cambria Math",serif;
-      mso-bidi-font-family:"Times New Roman"'><m:r>F</m:r></span></i></m:e><m:sup><i
-      style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:
-      6.5pt;mso-bidi-font-size:7.5pt;font-family:"Cambria Math",serif;
-      mso-bidi-font-family:"Times New Roman"'><m:r>'</m:r></span></i></m:sup></m:sSup><i
-    style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:6.5pt;
-    mso-bidi-font-size:7.5pt;font-family:"Cambria Math",serif;mso-bidi-font-family:
-    "Times New Roman"'><m:r>/4</m:r></span></i></m:oMath></m:oMathPara><![endif]--><![if !msEquation]><span
-  lang=EN-US style='font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:
-  等线;mso-ascii-theme-font:minor-latin;mso-fareast-theme-font:minor-fareast;
-  mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";
-  mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:
-  ZH-CN;mso-bidi-language:AR-SA'><!--[if gte vml 1]><v:shape id="_x0000_i1025"
-   type="#_x0000_t75" style='width:12.65pt;height:15.55pt'>
-   <v:imagedata src="Table_readme.files/image007.png" o:title="" chromakey="white"/>
-  </v:shape><![endif]--><![if !vml]><img width=17 height=21
-  src="Table_readme.files/image008.png" v:shapes="_x0000_i1025"><![endif]></span><![endif]><span
-  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;
-  mso-fareast-font-family:等线'><o:p></o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><i
+  style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;color:black'>F’/4</span></i><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线'><o:p></o:p></span></p>
   </td>
-  <td width=28 nowrap style='width:21.25pt;border:none;mso-border-left-alt:
-  solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
+  <td width=27 nowrap style='width:19.9pt;border:none;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
   lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;
   mso-fareast-font-family:等线;color:black'>3.15<o:p></o:p></span></p>
   </td>
-  <td width=28 style='width:21.25pt;padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
+  <td width=27 style='width:19.9pt;padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
   lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;
   mso-fareast-font-family:等线;color:black'>4.32<o:p></o:p></span></p>
   </td>
-  <td width=28 style='width:21.25pt;padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
+  <td width=27 style='width:19.9pt;padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
   lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;
   mso-fareast-font-family:等线;color:black'>3.58<o:p></o:p></span></p>
   </td>
-  <td width=28 style='width:21.3pt;border:none;border-right:solid windowtext 1.0pt;
+  <td width=27 style='width:19.95pt;border:none;border-right:solid windowtext 1.0pt;
   mso-border-right-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
   height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
@@ -352,32 +305,21 @@ The training process can be seen in figures below, where both LSA-based models a
   </td>
  </tr>
  <tr style='mso-yfti-irow:4;height:11.35pt'>
-  <td width=28 style='width:21.25pt;border-top:none;border-left:none;
+  <td width=36 style='width:26.85pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
   padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
-  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><!--[if gte msEquation 12]><m:oMathPara><m:oMath><m:rad><m:radPr><m:degHide
-       m:val="on"/><span style='font-size:6.5pt;mso-ansi-font-size:6.5pt;
-      mso-bidi-font-size:7.5pt;font-family:"Cambria Math",serif;mso-ascii-font-family:
-      "Cambria Math";mso-hansi-font-family:"Cambria Math";mso-bidi-font-family:
-      "Times New Roman";color:black;font-style:italic;mso-bidi-font-style:normal'><m:ctrlPr></m:ctrlPr></span></m:radPr><m:deg></m:deg><m:e><i
-      style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:
-      6.5pt;mso-bidi-font-size:7.5pt;font-family:"Cambria Math",serif;
-      mso-bidi-font-family:"Times New Roman"'><m:r>F</m:r><m:r>'</m:r></span></i></m:e></m:rad></m:oMath></m:oMathPara><![endif]--><![if !msEquation]><span
-  lang=EN-US style='font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:
-  等线;mso-ascii-theme-font:minor-latin;mso-fareast-theme-font:minor-fareast;
-  mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";
-  mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:
-  ZH-CN;mso-bidi-language:AR-SA'><!--[if gte vml 1]><v:shape id="_x0000_i1025"
-   type="#_x0000_t75" style='width:10.35pt;height:15.55pt'>
-   <v:imagedata src="Table_readme.files/image009.png" o:title="" chromakey="white"/>
-  </v:shape><![endif]--><![if !vml]><img width=14 height=21
-  src="Table_readme.files/image010.png" v:shapes="_x0000_i1025"><![endif]></span><![endif]><span
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
   lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;
-  color:black'><o:p></o:p></span></p>
+  color:black'>Sqrt(<i style='mso-bidi-font-style:normal'>F</i></span><span
+  class=GramE><span style='font-size:6.5pt;mso-bidi-font-size:7.5pt;mso-ascii-font-family:
+  "Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:black'>‘</span></span><span lang=EN-US
+  style='font-size:6.5pt;mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;
+  color:black'>)<o:p></o:p></span></p>
   </td>
-  <td width=28 nowrap style='width:21.25pt;border:none;border-bottom:solid windowtext 1.0pt;
+  <td width=27 nowrap style='width:19.9pt;border:none;border-bottom:solid windowtext 1.0pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
   height:11.35pt'>
@@ -386,7 +328,7 @@ The training process can be seen in figures below, where both LSA-based models a
   mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
   等线;color:black'>3.16<o:p></o:p></span></b></p>
   </td>
-  <td width=28 style='width:21.25pt;border:none;border-bottom:solid windowtext 1.0pt;
+  <td width=27 style='width:19.9pt;border:none;border-bottom:solid windowtext 1.0pt;
   mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
   height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b
@@ -394,17 +336,17 @@ The training process can be seen in figures below, where both LSA-based models a
   mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
   等线;color:black'>4.35<o:p></o:p></span></b></p>
   </td>
-  <td width=28 style='width:21.25pt;border:none;border-bottom:solid windowtext 1.0pt;
+  <td width=27 style='width:19.9pt;border:none;border-bottom:solid windowtext 1.0pt;
   mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
   height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
   lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;
   mso-fareast-font-family:等线;color:black;mso-bidi-font-weight:bold'>3.61<o:p></o:p></span></p>
   </td>
-  <td width=28 style='width:21.3pt;border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
-  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
-  0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
+  <td width=27 style='width:19.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b
   style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:7.5pt;
   mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
@@ -429,7 +371,7 @@ The training process can be seen in figures below, where both LSA-based models a
   </td>
  </tr>
  <tr style='mso-yfti-irow:5;height:11.35pt'>
-  <td width=28 rowspan=3 style='width:21.3pt;border-top:none;border-left:none;
+  <td width=28 rowspan=3 style='width:21.1pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
@@ -438,38 +380,18 @@ The training process can be seen in figures below, where both LSA-based models a
   style='font-size:5.0pt;mso-bidi-font-size:5.5pt;font-family:"Times New Roman",serif;
   color:black'>DPARN<o:p></o:p></span></p>
   </td>
-  <td width=28 style='width:21.25pt;border:none;border-right:solid windowtext 1.0pt;
+  <td width=36 style='width:26.85pt;border:none;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-right-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
   height:11.35pt'>
-  <p class=MsoNormal align=center style='text-align:center'><!--[if gte msEquation 12]><m:oMathPara><m:oMath><m:sSup><m:sSupPr><span
-      style='font-size:6.5pt;mso-ansi-font-size:6.5pt;mso-bidi-font-size:7.5pt;
-      font-family:"Cambria Math",serif;mso-ascii-font-family:"Cambria Math";
-      mso-hansi-font-family:"Cambria Math";mso-bidi-font-family:"Times New Roman";
-      font-style:italic;mso-bidi-font-style:normal'><m:ctrlPr></m:ctrlPr></span></m:sSupPr><m:e><i
-      style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:
-      6.5pt;mso-bidi-font-size:7.5pt;font-family:"Cambria Math",serif;
-      mso-bidi-font-family:"Times New Roman"'><m:r>F</m:r></span></i></m:e><m:sup><i
-      style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:
-      6.5pt;mso-bidi-font-size:7.5pt;font-family:"Cambria Math",serif;
-      mso-bidi-font-family:"Times New Roman"'><m:r>'</m:r></span></i></m:sup></m:sSup><i
-    style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:6.5pt;
-    mso-bidi-font-size:7.5pt;font-family:"Cambria Math",serif;mso-bidi-font-family:
-    "Times New Roman"'><m:r>/2</m:r></span></i></m:oMath></m:oMathPara><![endif]--><![if !msEquation]><span
-  lang=EN-US style='font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:
-  等线;mso-ascii-theme-font:minor-latin;mso-fareast-theme-font:minor-fareast;
-  mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";
-  mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:
-  ZH-CN;mso-bidi-language:AR-SA'><!--[if gte vml 1]><v:shape id="_x0000_i1025"
-   type="#_x0000_t75" style='width:12.65pt;height:15.55pt'>
-   <v:imagedata src="Table_readme.files/image005.png" o:title="" chromakey="white"/>
-  </v:shape><![endif]--><![if !vml]><img width=17 height=21
-  src="Table_readme.files/image006.png" v:shapes="_x0000_i1025"><![endif]></span><![endif]><span
-  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:7.5pt;mso-fareast-font-family:
-  等线;color:black'><o:p></o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><i
+  style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;color:black'>F’/2</span></i><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:7.5pt;mso-fareast-font-family:等线;color:black'><o:p></o:p></span></p>
   </td>
-  <td width=28 nowrap style='width:21.25pt;border:none;mso-border-top-alt:solid windowtext .5pt;
+  <td width=27 nowrap style='width:19.9pt;border:none;mso-border-top-alt:solid windowtext .5pt;
   mso-border-left-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
   height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center'><b><span
@@ -477,7 +399,7 @@ The training process can be seen in figures below, where both LSA-based models a
   color:black'>2.96</span></b><span lang=EN-US style='font-size:7.5pt;
   mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;color:black'><o:p></o:p></span></p>
   </td>
-  <td width=28 style='width:21.25pt;border:none;mso-border-top-alt:solid windowtext .5pt;
+  <td width=27 style='width:19.9pt;border:none;mso-border-top-alt:solid windowtext .5pt;
   padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center'><b><span
   lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;
@@ -485,13 +407,13 @@ The training process can be seen in figures below, where both LSA-based models a
   mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;color:black;
   mso-fareast-language:EN-US'><o:p></o:p></span></p>
   </td>
-  <td width=28 style='width:21.25pt;border:none;mso-border-top-alt:solid windowtext .5pt;
+  <td width=27 style='width:19.9pt;border:none;mso-border-top-alt:solid windowtext .5pt;
   padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
   style='font-size:7.5pt;mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;
   color:black'>3.63<o:p></o:p></span></p>
   </td>
-  <td width=28 style='width:21.3pt;border:none;border-right:solid windowtext 1.0pt;
+  <td width=27 style='width:19.95pt;border:none;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
   mso-border-right-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
   height:11.35pt'>
@@ -516,54 +438,35 @@ The training process can be seen in figures below, where both LSA-based models a
   </td>
  </tr>
  <tr style='mso-yfti-irow:6;height:11.35pt'>
-  <td width=28 style='width:21.25pt;border:none;border-right:solid windowtext 1.0pt;
+  <td width=36 style='width:26.85pt;border:none;border-right:solid windowtext 1.0pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-right-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
   height:11.35pt'>
-  <p class=MsoNormal align=center style='text-align:center'><!--[if gte msEquation 12]><m:oMathPara><m:oMath><m:sSup><m:sSupPr><span
-      style='font-size:6.5pt;mso-ansi-font-size:6.5pt;mso-bidi-font-size:7.5pt;
-      font-family:"Cambria Math",serif;mso-ascii-font-family:"Cambria Math";
-      mso-hansi-font-family:"Cambria Math";mso-bidi-font-family:"Times New Roman";
-      font-style:italic;mso-bidi-font-style:normal'><m:ctrlPr></m:ctrlPr></span></m:sSupPr><m:e><i
-      style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:
-      6.5pt;mso-bidi-font-size:7.5pt;font-family:"Cambria Math",serif;
-      mso-bidi-font-family:"Times New Roman"'><m:r>F</m:r></span></i></m:e><m:sup><i
-      style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:
-      6.5pt;mso-bidi-font-size:7.5pt;font-family:"Cambria Math",serif;
-      mso-bidi-font-family:"Times New Roman"'><m:r>'</m:r></span></i></m:sup></m:sSup><i
-    style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:6.5pt;
-    mso-bidi-font-size:7.5pt;font-family:"Cambria Math",serif;mso-bidi-font-family:
-    "Times New Roman"'><m:r>/4</m:r></span></i></m:oMath></m:oMathPara><![endif]--><![if !msEquation]><span
-  lang=EN-US style='font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:
-  等线;mso-ascii-theme-font:minor-latin;mso-fareast-theme-font:minor-fareast;
-  mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";
-  mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:
-  ZH-CN;mso-bidi-language:AR-SA'><!--[if gte vml 1]><v:shape id="_x0000_i1025"
-   type="#_x0000_t75" style='width:12.65pt;height:15.55pt'>
-   <v:imagedata src="Table_readme.files/image007.png" o:title="" chromakey="white"/>
-  </v:shape><![endif]--><![if !vml]><img width=17 height=21
-  src="Table_readme.files/image008.png" v:shapes="_x0000_i1025"><![endif]></span><![endif]><span
-  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:7.5pt;color:black'><o:p></o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><i
+  style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;color:black'>F’/4</span></i><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:7.5pt;color:black'><o:p></o:p></span></p>
   </td>
-  <td width=28 nowrap style='width:21.25pt;border:none;mso-border-left-alt:
-  solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
+  <td width=27 nowrap style='width:19.9pt;border:none;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
   style='font-size:7.5pt;mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;
   color:black'>2.95<o:p></o:p></span></p>
   </td>
-  <td width=28 style='width:21.25pt;padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
+  <td width=27 style='width:19.9pt;padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
   style='font-size:7.5pt;mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;
   color:black'>4.27</span><span lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:
   8.0pt;font-family:"Times New Roman",serif;color:black;mso-fareast-language:
   EN-US'><o:p></o:p></span></p>
   </td>
-  <td width=28 style='width:21.25pt;padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
+  <td width=27 style='width:19.9pt;padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center'><b><span
   lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;
   color:black'>3.65<o:p></o:p></span></b></p>
   </td>
-  <td width=28 style='width:21.3pt;border:none;border-right:solid windowtext 1.0pt;
+  <td width=27 style='width:19.95pt;border:none;border-right:solid windowtext 1.0pt;
   mso-border-right-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
   height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
@@ -584,32 +487,22 @@ The training process can be seen in figures below, where both LSA-based models a
   </td>
  </tr>
  <tr style='mso-yfti-irow:7;mso-yfti-lastrow:yes;height:11.35pt'>
-  <td width=28 style='width:21.25pt;border-top:none;border-left:none;
+  <td width=36 style='width:26.85pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
   padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
-  <p class=MsoNormal align=center style='text-align:center'><!--[if gte msEquation 12]><m:oMathPara><m:oMath><m:rad><m:radPr><m:degHide
-       m:val="on"/><span style='font-size:6.5pt;mso-ansi-font-size:6.5pt;
-      mso-bidi-font-size:7.5pt;font-family:"Cambria Math",serif;mso-ascii-font-family:
-      "Cambria Math";mso-hansi-font-family:"Cambria Math";mso-bidi-font-family:
-      "Times New Roman";color:black;font-style:italic;mso-bidi-font-style:normal'><m:ctrlPr></m:ctrlPr></span></m:radPr><m:deg></m:deg><m:e><i
-      style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:
-      6.5pt;mso-bidi-font-size:7.5pt;font-family:"Cambria Math",serif;
-      mso-bidi-font-family:"Times New Roman"'><m:r>F</m:r><m:r>'</m:r></span></i></m:e></m:rad></m:oMath></m:oMathPara><![endif]--><![if !msEquation]><span
-  lang=EN-US style='font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:
-  等线;mso-ascii-theme-font:minor-latin;mso-fareast-theme-font:minor-fareast;
-  mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";
-  mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:
-  ZH-CN;mso-bidi-language:AR-SA'><!--[if gte vml 1]><v:shape id="_x0000_i1025"
-   type="#_x0000_t75" style='width:10.35pt;height:15.55pt'>
-   <v:imagedata src="Table_readme.files/image009.png" o:title="" chromakey="white"/>
-  </v:shape><![endif]--><![if !vml]><img width=14 height=21
-  src="Table_readme.files/image010.png" v:shapes="_x0000_i1025"><![endif]></span><![endif]><span
-  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;
-  mso-fareast-font-family:等线'><o:p></o:p></span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:6.5pt;mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;
+  color:black'>Sqrt(<i style='mso-bidi-font-style:normal'>F</i></span><span
+  class=GramE><span style='font-size:6.5pt;mso-bidi-font-size:7.5pt;mso-ascii-font-family:
+  "Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+  "Times New Roman";color:black'>‘</span></span><span lang=EN-US
+  style='font-size:6.5pt;mso-bidi-font-size:7.5pt;font-family:"Times New Roman",serif;
+  color:black'>)</span><span lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:
+  7.5pt;font-family:"Times New Roman",serif;mso-fareast-font-family:等线'><o:p></o:p></span></p>
   </td>
-  <td width=28 nowrap style='width:21.25pt;border:none;border-bottom:solid windowtext 1.0pt;
+  <td width=27 nowrap style='width:19.9pt;border:none;border-bottom:solid windowtext 1.0pt;
   mso-border-left-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
   height:11.35pt'>
@@ -617,24 +510,24 @@ The training process can be seen in figures below, where both LSA-based models a
   style='font-size:7.5pt;mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;
   color:black'>2.94<b><o:p></o:p></b></span></p>
   </td>
-  <td width=28 style='width:21.25pt;border:none;border-bottom:solid windowtext 1.0pt;
+  <td width=27 style='width:19.9pt;border:none;border-bottom:solid windowtext 1.0pt;
   mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
   height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
   style='font-size:7.5pt;mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;
   color:black'>4.27<b><o:p></o:p></b></span></p>
   </td>
-  <td width=28 style='width:21.25pt;border:none;border-bottom:solid windowtext 1.0pt;
+  <td width=27 style='width:19.9pt;border:none;border-bottom:solid windowtext 1.0pt;
   mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 1.4pt 0cm 1.4pt;
   height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
   style='font-size:7.5pt;mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;
   color:black'>3.62<b><o:p></o:p></b></span></p>
   </td>
-  <td width=28 style='width:21.3pt;border-top:none;border-left:none;border-bottom:
-  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
-  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
-  0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
+  <td width=27 style='width:19.95pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:11.35pt'>
   <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
   style='font-size:7.5pt;mso-bidi-font-size:8.0pt;font-family:"Times New Roman",serif;
   color:black'>3.67<b><o:p></o:p></b></span></p>
@@ -657,17 +550,25 @@ The training process can be seen in figures below, where both LSA-based models a
  </tr>
  <![if !supportMisalignedColumns]>
  <tr height=0>
-  <td width=37 style='border:none'></td>
-  <td width=37 style='border:none'></td>
-  <td width=37 style='border:none'></td>
-  <td width=37 style='border:none'></td>
-  <td width=37 style='border:none'></td>
-  <td width=37 style='border:none'></td>
-  <td width=49 style='border:none'></td>
-  <td width=37 style='border:none'></td>
-  <td width=12 style='border:none'></td>
+  <td width=28 style='border:none'></td>
+  <td width=36 style='border:none'></td>
+  <td width=27 style='border:none'></td>
+  <td width=27 style='border:none'></td>
+  <td width=27 style='border:none'></td>
+  <td width=27 style='border:none'></td>
+  <td width=38 style='border:none'></td>
+  <td width=28 style='border:none'></td>
+  <td width=9 style='border:none'></td>
  </tr>
  <![endif]>
 </table>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
 
 
