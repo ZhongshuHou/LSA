@@ -1,13 +1,13 @@
 # Local Spectral Attention for Full-band Speech Enhancement  
 
 # Contents
-- [Repository description](#1.-repository-description)
+- [Repository description](#repository-description)
 - [Rquirements](#rquirements)
 - [Network training](#network-training)
 	- [Data preparation](#data-preparation)
 	- [bbb](#bbb)
 
-## 1. Repository description
+## Repository description
 This repository conduct ablation studies on local attention (a.k.a band attention) applied in full-band spectrum, namely local spectral attention (LSA). Two full-band speech enhancement (SE) models with spectral attention replace the conventional attention (a global manner) with LSA that only looks at adjacent bands at a certain frequency (a local manner). One model is our previous work called DPARN, whose source code can be found in   
 https://github.com/Qinwen-Hu/dparn.   
 The other model is the Multi-Scale Temporal Frequency with Axial Attention (MTFAA) network, which ranked 1st in the DNS-4 challenge for full-band SE, and its detailed description can be found in paper  
