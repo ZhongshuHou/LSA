@@ -1951,4 +1951,6 @@ The objective test results can be seen in table below
 
 </body>
 
-
+The proposed LSA improves the enhancement performance of both the casual DPARN and MTFAA models in terms of all objective metrics. To reveal the benefit of LSA mechanism, we visualize the normalized average spectral attention plots, generated from audios in the test set, of attention blocks in both original MTFAA and LSA-based MTFAA, as shown in figures below  
+<!-- ![attn_vis](https://user-images.githubusercontent.com/103247057/222086124-5cc5f250-322b-4ffa-bcd1-11b3ae31047e.JPG) -->
+<div align=center><img src="https://user-images.githubusercontent.com/103247057/222086124-5cc5f250-322b-4ffa-bcd1-11b3ae31047e.JPG" width="320" height="240" /></div>
