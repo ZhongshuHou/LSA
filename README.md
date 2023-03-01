@@ -30,3 +30,4 @@ Split your speech and noise audios into 10 seconds segments and generate the .cs
    VALID_NOISE_CSV = './valid_noise_data.csv'  
    RIR_DIR = 'direction to RIR .wav audios'
 ```
+where the .csv file is organized as 
