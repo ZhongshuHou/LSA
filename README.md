@@ -73,6 +73,6 @@ The visualization of LSA mechanism can be seen in the figure below:
 <div align=center><img src="https://user-images.githubusercontent.com/103247057/222067488-191bf69f-238a-4616-96dd-582946f6473c.png" width="600" height="250" /></div>  
 
 The unofficial Pytorch implementation of MTFAA and its LSA-based model can be seen in [MTFAA_Net_full.py](https://github.com/ZhongshuHou/LSA/blob/main/MTFAA_Net_full.py) and [MTFAA_Net_full_local_atten.py](https://github.com/ZhongshuHou/LSA/blob/main/MTFAA_Net_full_local_atten.py) respectively. As for DPARN, readers may attend to https://github.com/Qinwen-Hu/dparn. 
-<!-- ![trainloss_dparn](https://user-images.githubusercontent.com/103247057/222071888-eccd4454-d58f-4119-a990-3eda2dea98dd.png) -->
-<div align=center><img src="https://user-images.githubusercontent.com/103247057/222071888-eccd4454-d58f-4119-a990-3eda2dea98dd.png" width="300" height="250" /></div> 
+<!-- ![trainloss_dparn](https://user-images.githubusercontent.com/103247057/222072535-ab00598c-448d-47ff-9cf3-77e7da8d302c.jpeg) -->
+<div align=center><img src="https://user-images.githubusercontent.com/103247057/222072535-ab00598c-448d-47ff-9cf3-77e7da8d302c.jpeg" width="320" height="250" /></div> 
 
