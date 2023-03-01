@@ -1959,6 +1959,7 @@ It can be seen from the fifth layer of attention that the LSA-based model more e
 <!-- ![samples](https://user-images.githubusercontent.com/103247057/222087161-bf9ce54d-23d6-45c6-8e1d-c7693cbee839.JPG) -->
 <div align=center><img src="https://user-images.githubusercontent.com/103247057/222087161-bf9ce54d-23d6-45c6-8e1d-c7693cbee839.JPG"/></div>
 
+
 To further demonstrate the importance of modeling local correlation in spectrum for full-band SE tasks, we also compare local attention with a recently proposed biased attention method, namely Attention with Linear Biases (ALiBi), which negatively biases attention scores with a linearly decreasing penalty proportional to the distance between the relevant key and query for efficient extrapolation. Its application on spectral attention can be seen in the figure below  
 
 <!-- ![Abi](https://user-images.githubusercontent.com/103247057/222088489-44d05699-41df-4f0e-9bc9-d7f8a84947b7.png) -->
@@ -1967,3 +1968,852 @@ We modify the penalty bias to decrease in a square manner for better performance
 <!-- ![biasmode](https://user-images.githubusercontent.com/103247057/222089742-d042e36c-f9cb-4747-9bab-700b891c25c1.JPG) -->
 <div align=center><img src="https://user-images.githubusercontent.com/103247057/222089742-d042e36c-f9cb-4747-9bab-700b891c25c1.JPG" width="400" height="250" /></div>  
 The modified method is combined with MTFAA and the ablation test results can be found in the last row of table below. It can be seen that the overall performance degrades compared with LSA. It may be explained that the negative bias added to local attention region weakens the model capability to extract local intercorrelation.
+
+
+<body lang=ZH-CN style='tab-interval:21.0pt;text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<div align=center>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=548
+ style='border-collapse:collapse;mso-table-layout-alt:fixed;border:none;
+ mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:15.0pt'>
+  <td width=75 nowrap style='width:56.45pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><a
+  name="_Hlk127719777"><span lang=EN-US style='font-size:5.5pt;mso-bidi-font-size:
+  10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:等线;
+  mso-font-kerning:0pt'>Full-band Metrics</span></a><span style='mso-bookmark:
+  _Hlk127719777'><span lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:
+  10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:等线;
+  mso-font-kerning:0pt'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=118 nowrap colspan=3 style='width:88.6pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:7.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>STOI<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=118 nowrap colspan=3 style='width:88.6pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:7.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>SiSDR(dB)<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap rowspan=4 style='width:29.5pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'><span
+  style='mso-bookmark:_Hlk127719777'></span>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:7.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=197 colspan=5 style='width:147.7pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span class=GramE><span lang=EN-US
+  style='font-size:7.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>LSD(</span></span></span><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:7.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>dB)<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:15.0pt'>
+  <td width=75 nowrap style='width:56.45pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span class=GramE><span lang=EN-US
+  style='font-size:6.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>SNR(</span></span></span><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>dB)</span></span><span style='mso-bookmark:_Hlk127719777'><span
+  lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap style='width:29.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:7.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>-5~0<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:7.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>0~15<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span class=SpellE><span lang=EN-US
+  style='font-size:7.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>Ovrl</span></span></span><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:7.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>.<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap style='width:29.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:7.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>-5~0<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:7.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>0~15<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span class=SpellE><span lang=EN-US
+  style='font-size:7.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>Ovrl</span></span></span><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:7.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>.<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=79 nowrap colspan=2 style='width:59.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:7.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>Band(kHz)</span></span><span style='mso-bookmark:
+  _Hlk127719777'><span lang=EN-US style='font-size:5.0pt;mso-bidi-font-size:
+  10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:等线;
+  mso-font-kerning:0pt'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 style='width:29.5pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>0~8<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>8~24<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:7.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>Full.<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:15.6pt'>
+  <td width=75 nowrap style='width:56.45pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>MTFAA-<span class=SpellE>ASqBi</span><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap style='width:29.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><b><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>0.811</span></b></span><span style='mso-bookmark:
+  _Hlk127719777'><span lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:
+  10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:等线;
+  mso-font-kerning:0pt'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>0.881<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><b style='mso-bidi-font-weight:normal'><span
+  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>0.860</span></b></span><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap valign=top style='width:29.5pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><b><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>10.425<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap valign=top style='width:29.55pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt;mso-bidi-font-weight:bold'>15.944</span></span><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap valign=top style='width:29.55pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt;mso-bidi-font-weight:bold'>14.468</span></span><span
+  style='mso-bookmark:_Hlk127719777'><b style='mso-bidi-font-weight:normal'><span
+  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'><o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=79 nowrap colspan=2 style='width:59.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>MTFAA-<span class=SpellE>ASqaBi</span><span
+  style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 style='width:29.5pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>10.307<b><o:p></o:p></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>9.495<span style='mso-bidi-font-weight:bold'><o:p></o:p></span></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 valign=top style='width:29.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt;mso-bidi-font-weight:bold'>9.766<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:15.6pt'>
+  <td width=75 nowrap style='width:56.45pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>MTFAA-LSA</span></span><span style='mso-bookmark:
+  _Hlk127719777'><span lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:
+  10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:等线;
+  mso-font-kerning:0pt'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap style='width:29.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>0.809<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><b style='mso-bidi-font-weight:normal'><span
+  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>0.881<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>0.860<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap valign=top style='width:29.5pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>10.347<o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap valign=top style='width:29.55pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><b style='mso-bidi-font-weight:normal'><span
+  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>16.201<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 nowrap valign=top style='width:29.55pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><b style='mso-bidi-font-weight:normal'><span
+  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>14.635</span></b></span><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'><o:p></o:p></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=79 nowrap colspan=2 style='width:59.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>MTFAA-LSA<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 style='width:29.5pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><b style='mso-bidi-font-weight:normal'><span
+  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>9.840<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><b style='mso-bidi-font-weight:normal'><span
+  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>8.636<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+  <td width=39 valign=top style='width:29.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  style='mso-bookmark:_Hlk127719777'><b style='mso-bidi-font-weight:normal'><span
+  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>9.037<o:p></o:p></span></b></span></p>
+  </td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:15.0pt'>
+  <td width=548 nowrap colspan=13 style='width:410.85pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'><span style='mso-bookmark:_Hlk127719777'></span></td>
+  <span style='mso-bookmark:_Hlk127719777'></span>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:15.0pt'>
+  <td width=75 nowrap style='width:56.45pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:5.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>Wideband Metrics</span><span
+  lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=118 nowrap colspan=3 style='width:88.6pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>PESQ<o:p></o:p></span></p>
+  </td>
+  <td width=118 nowrap colspan=3 style='width:88.6pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>CSIG<o:p></o:p></span></p>
+  </td>
+  <td width=118 nowrap colspan=3 style='width:88.6pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>CBAK<o:p></o:p></span></p>
+  </td>
+  <td width=118 colspan=3 valign=top style='width:88.6pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>COVL<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;height:15.0pt'>
+  <td width=75 nowrap style='width:56.45pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  class=GramE><span lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:10.0pt;
+  font-family:"Times New Roman",serif;mso-fareast-font-family:等线;mso-font-kerning:
+  0pt'>SNR(</span></span><span lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:
+  10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:等线;
+  mso-font-kerning:0pt'>dB)<o:p></o:p></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>-5~0</span><span lang=EN-US
+  style='font-size:6.5pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>0~15</span><span lang=EN-US
+  style='font-size:6.5pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  class=SpellE><span lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:10.0pt;
+  font-family:"Times New Roman",serif;mso-fareast-font-family:等线;mso-font-kerning:
+  0pt'>Ovrl</span></span><span lang=EN-US style='font-size:7.5pt;mso-bidi-font-size:
+  10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:等线;
+  mso-font-kerning:0pt'>.</span><span lang=EN-US style='font-size:6.5pt;
+  font-family:"Times New Roman",serif;mso-fareast-font-family:等线;mso-font-kerning:
+  0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>-5~0<o:p></o:p></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>0~15<o:p></o:p></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  class=SpellE><span lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>Ovrl</span></span><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>.<o:p></o:p></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>-5~0<o:p></o:p></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>0~15<o:p></o:p></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  class=SpellE><span lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>Ovrl</span></span><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>.<o:p></o:p></span></p>
+  </td>
+  <td width=39 style='width:29.5pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>-5~0<o:p></o:p></span></p>
+  </td>
+  <td width=39 style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>0~15<o:p></o:p></span></p>
+  </td>
+  <td width=39 style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  class=SpellE><span lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>Ovrl</span></span><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;height:15.6pt'>
+  <td width=75 nowrap style='width:56.45pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>MTFAA-<span class=SpellE>ASqBi</span><o:p></o:p></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>2.064</span><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>2.769</span><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>2.564</span><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>3.487<span style='mso-bidi-font-weight:
+  bold'><o:p></o:p></span></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>4.165<o:p></o:p></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>3.968<o:p></o:p></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt;mso-bidi-font-weight:bold'>2.987<o:p></o:p></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>3.558<span style='mso-bidi-font-weight:
+  bold'><o:p></o:p></span></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>3.392<span style='mso-bidi-font-weight:
+  bold'><o:p></o:p></span></span></p>
+  </td>
+  <td width=39 style='width:29.5pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt;mso-bidi-font-weight:bold'>2.804<o:p></o:p></span></p>
+  </td>
+  <td width=39 style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt;mso-bidi-font-weight:bold'>3.513<o:p></o:p></span></p>
+  </td>
+  <td width=39 style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt;mso-bidi-font-weight:bold'>3.308<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;mso-yfti-lastrow:yes;height:15.6pt'>
+  <td width=75 nowrap style='width:56.45pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+  lang=EN-US style='font-size:6.5pt;mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'>MTFAA-LSA<o:p></o:p></span></p>
+  </td>
+  <td width=39 nowrap style='width:29.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>2.084</span></b><b style='mso-bidi-font-weight:normal'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'><o:p></o:p></span></b></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>2.795</span></b><b style='mso-bidi-font-weight:normal'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'><o:p></o:p></span></b></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:6.5pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+  等线;mso-font-kerning:0pt'>2.589</span></b><b style='mso-bidi-font-weight:normal'><span
+  lang=EN-US style='font-size:6.5pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:等线;mso-font-kerning:0pt'><o:p></o:p></span></b></p>
+  </td>
+  <td width=39 nowrap style='width:29.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:6.5pt;
+  font-family:"Times New Roman",serif;mso-fareast-font-family:等线;mso-font-kerning:
+  0pt'>3.517<o:p></o:p></span></b></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:6.5pt;
+  font-family:"Times New Roman",serif;mso-fareast-font-family:等线;mso-font-kerning:
+  0pt'>4.203<o:p></o:p></span></b></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:6.5pt;
+  font-family:"Times New Roman",serif;mso-fareast-font-family:等线;mso-font-kerning:
+  0pt'>4.004<o:p></o:p></span></b></p>
+  </td>
+  <td width=39 nowrap style='width:29.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:6.5pt;
+  font-family:"Times New Roman",serif;mso-fareast-font-family:等线;mso-font-kerning:
+  0pt'>3.006<o:p></o:p></span></b></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:6.5pt;
+  font-family:"Times New Roman",serif;mso-fareast-font-family:等线;mso-font-kerning:
+  0pt'>3.593<o:p></o:p></span></b></p>
+  </td>
+  <td width=39 nowrap style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:6.5pt;
+  font-family:"Times New Roman",serif;mso-fareast-font-family:等线;mso-font-kerning:
+  0pt'>3.423<o:p></o:p></span></b></p>
+  </td>
+  <td width=39 style='width:29.5pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:6.5pt;
+  font-family:"Times New Roman",serif;mso-fareast-font-family:等线;mso-font-kerning:
+  0pt'>2.829<o:p></o:p></span></b></p>
+  </td>
+  <td width=39 style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:6.5pt;
+  font-family:"Times New Roman",serif;mso-fareast-font-family:等线;mso-font-kerning:
+  0pt'>3.547<o:p></o:p></span></b></p>
+  </td>
+  <td width=39 style='width:29.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+  <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:6.5pt;
+  font-family:"Times New Roman",serif;mso-fareast-font-family:等线;mso-font-kerning:
+  0pt'>3.339<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-US><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
