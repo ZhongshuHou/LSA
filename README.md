@@ -3743,7 +3743,7 @@ We compare the modified MTFAA model with previous full-band SOTA methods on VCTK
   height:12.75pt'>
   <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
   style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
-  bold'>2022<o:p></o:p></span></p>
+  bold'>2023<o:p></o:p></span></p>
   </td>
   <td width=60 style='width:45.1pt;border:none;border-bottom:dashed windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
@@ -3820,7 +3820,7 @@ We compare the modified MTFAA model with previous full-band SOTA methods on VCTK
   height:12.75pt'>
   <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
   style='font-size:8.0pt;font-family:"Times New Roman",serif;mso-bidi-font-weight:
-  bold'>2022<o:p></o:p></span></p>
+  bold'>2023<o:p></o:p></span></p>
   </td>
   <td width=60 style='width:45.1pt;border:none;border-bottom:solid windowtext 1.0pt;
   mso-border-top-alt:dashed windowtext .5pt;mso-border-top-alt:dashed windowtext .5pt;
