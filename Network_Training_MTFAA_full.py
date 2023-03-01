@@ -2,7 +2,6 @@ from typing import OrderedDict
 from unicodedata import name
 import torch
 import torch.optim as optim
-# from torch.utils.tensorboard import SummaryWriter
 import numpy as np
 from torch.optim.lr_scheduler import StepLR
 from tqdm import tqdm
@@ -16,7 +15,6 @@ from signal_processing import iSTFT_module_1_8
 WINDOW = torch.sqrt(torch.hann_window(1536,device=device) + 1e-8)
 import argparse
 import librosa
-import pesq
 from collections import OrderedDict
 import os
 
@@ -68,11 +66,6 @@ def main(args):
         imag_loss = torch.mean((pred_imag_c - true_imag_c)**2)
         mag_loss = torch.mean((pred_mag**(0.3)-true_mag**(0.3))**2)
 
-        # if train & (idx%100==0):
-        #     with torch.no_grad():
-        #         s = model(N)
-        #         s = s.cpu().detach().numpy()
-        #         np.save('/data/hdd0/zhongshu.hou/Torch_DPCRN/mag_checkpoint/epoch_' + str(epoch) + '_step_' + str(idx) + '.npy', s)
 
         return 0.3*(real_loss + imag_loss) + 0.7*mag_loss, snr_loss
     
