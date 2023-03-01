@@ -579,7 +579,7 @@ Firstly, we conduct experiments on different setting of ***N<sub>l</sub>*** base
 </div>
 
 </body>  
-It can be seen that the setting of ***N<sub>l</sub>*** affects different models differently and we choose the setting achieving the best performance for each model. Next, we train the models with the larger DNS4 dataset and the training process can be seen in figures below, where both LSA-based models achieve better convergence compared with the original models. 
+It can be seen that the setting of ***N<sub>l</sub>*** affects different models differently and we choose the setting achieving the best performance for each model, i.e. sqrt(***F'***) for MTFAA and ***F'/2*** for DPARN. Next, we train the models with the larger DNS4 dataset and the training process can be seen in figures below, where both LSA-based models achieve better convergence compared with the original models. 
 <!-- ![trainloss_dparn](https://user-images.githubusercontent.com/103247057/222072535-ab00598c-448d-47ff-9cf3-77e7da8d302c.jpeg) -->
 <!-- ![Validation](https://user-images.githubusercontent.com/103247057/222072910-c3c7730d-b7be-45ca-9591-5706c395f1ad.jpeg) -->
 <div align=center><img src="https://user-images.githubusercontent.com/103247057/222072535-ab00598c-448d-47ff-9cf3-77e7da8d302c.jpeg" width="320" height="240" /><img src="https://user-images.githubusercontent.com/103247057/222072910-c3c7730d-b7be-45ca-9591-5706c395f1ad.jpeg" width="320" height="240" /></div>
