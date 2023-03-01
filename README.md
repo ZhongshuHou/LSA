@@ -73,7 +73,7 @@ The visualization of LSA mechanism can be seen in the figure below:
 <div align=center><img src="https://user-images.githubusercontent.com/103247057/222067488-191bf69f-238a-4616-96dd-582946f6473c.png" width="600" height="250" /></div>  
 
 The unofficial Pytorch implementation of MTFAA and its LSA-based model can be seen in [MTFAA_Net_full.py](https://github.com/ZhongshuHou/LSA/blob/main/MTFAA_Net_full.py) and [MTFAA_Net_full_local_atten.py](https://github.com/ZhongshuHou/LSA/blob/main/MTFAA_Net_full_local_atten.py) respectively. As for DPARN, readers may attend to https://github.com/Qinwen-Hu/dparn.  
-Firstly, we conduct experiments on different setting of ***N<sub>l</sub>*** and the results can be seen in table below:  
+Firstly, we conduct experiments on different setting of ***N<sub>l</sub>*** based on the VCTK-DEMAND dataset and the results can be seen in table below:  
 <body lang=ZH-CN style='tab-interval:21.0pt;text-justify-trim:punctuation'>
 
 <div class=WordSection1 style='layout-grid:15.6pt'>
@@ -578,10 +578,8 @@ Firstly, we conduct experiments on different setting of ***N<sub>l</sub>*** and 
 
 </div>
 
-</body>
-
-
-The training process can be seen in figures below, where both LSA-based models achieve better convergence compared with the original models. 
+</body>  
+It can be seen that the setting of ***N<sub>l</sub>*** affects different models differently and we choose the setting achieving the best performance for each model. Next, we train the models with the larger DNS4 dataset and the training process can be seen in figures below, where both LSA-based models achieve better convergence compared with the original models. 
 <!-- ![trainloss_dparn](https://user-images.githubusercontent.com/103247057/222072535-ab00598c-448d-47ff-9cf3-77e7da8d302c.jpeg) -->
 <!-- ![Validation](https://user-images.githubusercontent.com/103247057/222072910-c3c7730d-b7be-45ca-9591-5706c395f1ad.jpeg) -->
 <div align=center><img src="https://user-images.githubusercontent.com/103247057/222072535-ab00598c-448d-47ff-9cf3-77e7da8d302c.jpeg" width="320" height="240" /><img src="https://user-images.githubusercontent.com/103247057/222072910-c3c7730d-b7be-45ca-9591-5706c395f1ad.jpeg" width="320" height="240" /></div>
