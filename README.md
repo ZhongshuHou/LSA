@@ -34,5 +34,9 @@ where the .csv files for clean speech are organized as
 
 |file_dir|snr|
 | ---------- | :-----------:  | 
-| ./0001.wav | 4|
+| ./0001.wav | 4 |
+| ./0002.wav | -1 |
+| ./0003.wav | 0 |
+| ... | ... |
+
 
