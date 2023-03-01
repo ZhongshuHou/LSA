@@ -73,10 +73,27 @@ The visualization of LSA mechanism can be seen in the figure below:
 <div align=center><img src="https://user-images.githubusercontent.com/103247057/222067488-191bf69f-238a-4616-96dd-582946f6473c.png" width="600" height="250" /></div>  
 
 The unofficial Pytorch implementation of MTFAA and its LSA-based model can be seen in [MTFAA_Net_full.py](https://github.com/ZhongshuHou/LSA/blob/main/MTFAA_Net_full.py) and [MTFAA_Net_full_local_atten.py](https://github.com/ZhongshuHou/LSA/blob/main/MTFAA_Net_full_local_atten.py) respectively. As for DPARN, readers may attend to https://github.com/Qinwen-Hu/dparn.  
-The training process can be seen in the figures below, where both LSA-based models achieve better convergence compared with the original models. 
+The training process can be seen in figures below, where both LSA-based models achieve better convergence compared with the original models. 
 <!-- ![trainloss_dparn](https://user-images.githubusercontent.com/103247057/222072535-ab00598c-448d-47ff-9cf3-77e7da8d302c.jpeg) -->
 <!-- ![Validation](https://user-images.githubusercontent.com/103247057/222072910-c3c7730d-b7be-45ca-9591-5706c395f1ad.jpeg) -->
 <div align=center><img src="https://user-images.githubusercontent.com/103247057/222072535-ab00598c-448d-47ff-9cf3-77e7da8d302c.jpeg" width="320" height="240" /><img src="https://user-images.githubusercontent.com/103247057/222072910-c3c7730d-b7be-45ca-9591-5706c395f1ad.jpeg" width="320" height="240" /></div>
 <!-- ![trainloss_mtfaa](https://user-images.githubusercontent.com/103247057/222074817-58680383-6d61-42c6-9f94-eb4c58ecefab.jpeg)
 ![Validation_mtfaa](https://user-images.githubusercontent.com/103247057/222074828-44bc05e4-c05e-40bc-b4b5-060cdb7030a7.jpeg) -->
 <div align=center><img src="https://user-images.githubusercontent.com/103247057/222074817-58680383-6d61-42c6-9f94-eb4c58ecefab.jpeg" width="320" height="240" /><img src="https://user-images.githubusercontent.com/103247057/222074828-44bc05e4-c05e-40bc-b4b5-060cdb7030a7.jpeg" width="320" height="240" /></div>
+
+Full-band Metrics	STOI	SiSDR (dB)		LSD (dB)
+SNR(dB)	-5~0	0~15	Ovrl.	-5~0	0~15	Ovrl.		Band(kHz)	0~8	8~24	Full.
+Noisy	0.687	0.805	0.771	-2.515	7.971	5.166		Noisy	18.37	12.38	14.38
+MTFAA	0.805	0.876	0.856	10.10	15.74	14.23		MTFAA	10.33	9.349	9.678
+MTFAA-LSA	0.809↑	0.881↑	0.860↑	10.34↑	16.20↑	14.63↑		MTFAA-LSA	9.840↓	8.636↓	9.037↓
+DPARN	0.752	0.858	0.828	8.461	13.71	12.31		DPARN	10.92	13.11	12.38
+DPARN-LSA	0.757↑	0.861↑	0.831↑	8.617↑	13.84↑	12.47↑		DPARN-LSA	10.76↓	12.99↓	12.25↓
+
+Wideband Metrics	PESQ	CSIG	CBAK	COVL
+SNR(dB)	-5~0	0~15	Ovrl.	-5~0	0~15	Ovrl.	-5~0	0~15	Ovrl.	-5~0	0~15	Ovrl.
+Noisy	1.160	1.446	1.364	2.023	2.719	2.517	1.833	2.481	2.293	1.571	2.095	1.943
+MTFAA	1.981	2.669	2.470	3.465	4.113	3.925	2.951	3.523	3.357	2.754	3.436	3.238
+MTFAA-LSA	2.084↑	2.795↑	2.589↑	3.517↑	4.203↑	4.004↑	3.006↑	3.593↑	3.423↑	2.829↑	3.547↑	3.339↑
+DPARN	1.702	2.309	2.134	3.136	3.759	3.580	2.505	2.859	2.757	2.447	3.069	2.890
+DPARN-LSA	1.776↑	2.423↑	2.237↑	3.179↑	3.829↑	3.642↑	2.619↑	3.030↑	2.912↑	2.507↑	3.166↑	2.977↑
+
