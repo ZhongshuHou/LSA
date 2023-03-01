@@ -28,5 +28,5 @@ Split your speech and noise audios into 10 seconds segments and generate the .cs
    TRAIN_NOISE_CSV = './train_noise_data.csv'  
    VALID_CLEAN_CSV = './valid_clean_data.csv'  
    VALID_NOISE_CSV = './valid_noise_data.csv'  
-   RIR_DIR = 'direction to RIR .wav audios'```  
-
+   RIR_DIR = 'direction to RIR .wav audios'
+```
