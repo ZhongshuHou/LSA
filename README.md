@@ -1,10 +1,10 @@
 # Local Spectral Attention for Full-band Speech Enhancement  
 
 # Contents
-- [Repository description](#heading-one)
-- [Rquirements](#heading-two)
-- [Network training](#heading-three)
-	- [AAA](#aaa)
+- [Repository description](#repository-description)
+- [Rquirements](#rquirements)
+- [Network training](#network-training)
+	- [Data preparation](#data-preparation)
 	- [bbb](#bbb)
 
 ## 1. Repository description
