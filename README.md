@@ -23,7 +23,7 @@ tqdm:      4.62.3
 
 ## Network training
 ### Data preparation
-Split your speech and noise audios into 10 seconds segments and generate the .csv files to manage your data. Prepare your RIR audios of .wav format in one folder. Edit the .csv path in [Dataloader.py](https://github.com/ZhongshuHou/LSA/blob/main/Dataloader.py):  
+Split your speech and noise audios into **10 seconds segments** and generate the .csv files to manage your data. Prepare your RIR audios of .wav format in one folder. Edit the .csv path in [Dataloader.py](https://github.com/ZhongshuHou/LSA/blob/main/Dataloader.py):  
 ```TRAIN_CLEAN_CSV = './train_clean_data.csv'  
    TRAIN_NOISE_CSV = './train_noise_data.csv'  
    VALID_CLEAN_CSV = './valid_clean_data.csv'  
@@ -34,9 +34,17 @@ where the .csv files for clean speech are organized as
 
 |file_dir|snr|
 | ---------- | :-----------:  | 
-| ./0001.wav | 4 |
-| ./0002.wav | -1 |
-| ./0003.wav | 0 |
+| ./clean_0001.wav | 4 |
+| ./clean_0002.wav | -1 |
+| ./clean_0003.wav | 0 |
 | ... | ... |
 
+and the .csv files for noise are organized as  
+
+|file_dir|
+| ---------- |
+| ./noise_0001.wav |
+| ./noise_0002.wav |
+| ./noise_0003.wav |
+| ... |
 
