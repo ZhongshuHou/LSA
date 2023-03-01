@@ -1,5 +1,5 @@
 # Local Spectral Attention for Full-band Speech Enhancement  
-![Figure](https://user-images.githubusercontent.com/103247057/222057044-e8cdc198-23c2-4fc7-b548-0ec98da8377d.png)
+![Visualization of local spectral attention](https://user-images.githubusercontent.com/103247057/222057044-e8cdc198-23c2-4fc7-b548-0ec98da8377d.png)
 
 # Contents
 - [Repository description](#repository-description)
@@ -23,5 +23,5 @@ tqdm:      4.62.3
 
 ## Network training
 ### Data preparation
-Split your speech and noise audios into 10 seconds segments and generate the .csv files to manage your data. Edit the .csv path in [Dataloader.py](https://github.com/ZhongshuHou/LSA/blob/main/Dataloader.py)
+Split your speech and noise audios into 10 seconds segments and generate the .csv files to manage your data. Prepare your RIR audios in .wav format. Edit the .csv path in [Dataloader.py](https://github.com/ZhongshuHou/LSA/blob/main/Dataloader.py)
 
