@@ -68,4 +68,4 @@ We demonstrate the effectiveness of our proposed method on the full-band dataset
 
 ### LSA on MTFAA and DPARN
 The visualization of LSA mechanism can be seen in the figure below:  
-![LSA](https://user-images.githubusercontent.com/103247057/222067488-191bf69f-238a-4616-96dd-582946f6473c.png)<img src="[https://github.com/Legend-yd/MyDawn/blob/master/20171223205540585.png](https://user-images.githubusercontent.com/103247057/222067488-191bf69f-238a-4616-96dd-582946f6473c.png)" width="300" height="450" />
+![LSA](https://user-images.githubusercontent.com/103247057/222067488-191bf69f-238a-4616-96dd-582946f6473c.png)<img src="https://user-images.githubusercontent.com/103247057/222067488-191bf69f-238a-4616-96dd-582946f6473c.png" width="300" height="450" />
