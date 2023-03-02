@@ -1967,6 +1967,7 @@ To further demonstrate the importance of modeling local correlation in spectrum 
 We modify the penalty bias to decrease in a square manner for better performance and name the method as ASqBi, indicated in the figures below.  
 <!-- ![biasmode](https://user-images.githubusercontent.com/103247057/222089742-d042e36c-f9cb-4747-9bab-700b891c25c1.JPG) -->
 <div align=center><img src="https://user-images.githubusercontent.com/103247057/222089742-d042e36c-f9cb-4747-9bab-700b891c25c1.JPG" width="400" height="250" /></div>  
+
 The modified method is combined with MTFAA [MTFAA_Net_full_F_ASqbi.py](https://github.com/ZhongshuHou/LSA/blob/main/MTFAA_Net_full_F_ASqbi.py) 
 and the ablation test results can be found in the last row of table below. It can be seen that the overall performance degrades compared with LSA. It may be explained that the negative bias added to local attention region weakens the model capability to extract local intercorrelation.
  
