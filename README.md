@@ -5296,4 +5296,7 @@ The best performance of MSLSA is slightly worse than that of conventional LSA, w
 <!-- ![Validation_mtfaas_box](https://user-images.githubusercontent.com/103247057/223670308-36957894-07d0-4b34-88c5-14b6011c2e7e.jpeg) -->
 <div align=center><img src="https://user-images.githubusercontent.com/103247057/223670308-36957894-07d0-4b34-88c5-14b6011c2e7e.jpeg" width="320" height="240" /></div>
 
-Average attention plots of different heads in MSLSA are also given and it can be seen that the global attention head (***N<sub>l</sub>~=F'***)
+Average attention plots of different heads in MSLSA are also given and it can be seen that the global attention head (***N<sub>l</sub>~=F'***) cannot exploit clear spectral features while the local one (***N<sub>l</sub>~=F'/4***) makes it.
+
+![different_heads](https://user-images.githubusercontent.com/103247057/223672826-b1974433-c46b-44d3-9b25-284d2d098844.JPG)
+
