@@ -5285,3 +5285,8 @@ the performance of MSLSA can be seen in the table below,
 </div>
 
 </body>
+
+![trainloss_mtfaas](https://user-images.githubusercontent.com/103247057/223667340-de14f5f1-5d91-4873-8f49-ea62014a7905.jpeg)
+![Validation_mtfaas](https://user-images.githubusercontent.com/103247057/223667446-9e942476-dc0b-4456-b836-58e6eb435006.jpeg)
+
+<div align=center><img src="https://user-images.githubusercontent.com/103247057/223667340-de14f5f1-5d91-4873-8f49-ea62014a7905.jpeg" width="320" height="240" /><img src="https://user-images.githubusercontent.com/103247057/223667446-9e942476-dc0b-4456-b836-58e6eb435006.jpeg" width="320" height="240" /></div>
