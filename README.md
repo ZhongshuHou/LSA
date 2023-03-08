@@ -5296,7 +5296,10 @@ The best performance of MSLSA is slightly worse than that of conventional LSA, w
 <!-- ![Validation_mtfaas_box](https://user-images.githubusercontent.com/103247057/223670308-36957894-07d0-4b34-88c5-14b6011c2e7e.jpeg) -->
 <div align=center><img src="https://user-images.githubusercontent.com/103247057/223670308-36957894-07d0-4b34-88c5-14b6011c2e7e.jpeg" width="320" height="240" /></div>
 
-Average attention plots of different heads in MSLSA are also given and it can be seen that the global attention head (***N<sub>l</sub>~=F'***) cannot exploit clear spectral features while the local one (***N<sub>l</sub>~=F'/4***) makes it.
+Average attention plots of different heads in MSLSA are also given and it can be seen that the global attention head (***N<sub>l</sub>=F'***) cannot exploit clear spectral features while the local one (***N<sub>l</sub>=F'/4***) makes it.
 
 ![different_heads](https://user-images.githubusercontent.com/103247057/223672826-b1974433-c46b-44d3-9b25-284d2d098844.JPG)
 
+To further investigate the patterns of spectral attention, we firstly plot the attention figures generated from clean speech of male and female,
+
+![clean](https://user-images.githubusercontent.com/103247057/223674435-d6bd75d1-fb60-4b7b-88af-69b6f36af03d.JPG)
