@@ -5306,7 +5306,7 @@ To further investigate the patterns of spectral attention, we firstly plot the a
 
 it can be seen that the patterns are related to frequency characteristics that harmonics are basically distributed in low bands (top-left corner of attention plot) and consonants (almost randomly distributed) are in high bands (bottom-right corner of attention plot). It can be also seen that female's pitches are higher than male's with larger intervals. To be clearly, the harmonics-related lines are not parallel to each other for the frequencies are in the ERB scale.  
 
-Then we plot the attention figures generated from noisy speech and the attention plots in decoder are given below, where the harmonic-related features are highlight,
+Then we plot the attention figures generated from noisy speech and the attention plots in decoder are given below, where the harmonic-related features are highlighted,
 
 ![noisy](https://user-images.githubusercontent.com/103247057/223678938-2578145b-e9ac-47d4-b351-62c7b15b7923.JPG)
 
