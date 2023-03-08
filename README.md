@@ -3892,3 +3892,7 @@ We compare the modified MTFAA model with previous full-band SOTA methods on VCTK
 </div>
 
 </body>
+
+Ignited by ALiBi, we also conduct experiment on the multi-scale local spectral attention (MSLSA) as shown in the figure below:
+![MSLSA](https://user-images.githubusercontent.com/103247057/223663488-83df65ad-deb8-49fb-9ab0-af1b001e63b8.jpg)
+<div align=center><img src="https://user-images.githubusercontent.com/103247057/223663488-83df65ad-deb8-49fb-9ab0-af1b001e63b8.jpg" width="600" height="250" /></div>  
